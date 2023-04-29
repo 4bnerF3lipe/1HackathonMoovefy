@@ -1,6 +1,6 @@
 <script>
 import { defineComponent } from "vue";
-const name = 'CustomSubHeader'
+const name = ''
 
 export default defineComponent({
   name,
@@ -8,21 +8,15 @@ export default defineComponent({
   components: { }, 
 
   props: {
-    title:{
-      type:String,
-      required:true
+    width:{
+        type:String,
+        default:'400px',
     },
-
-    color:{
-      type:String,
-      default:'#707070',
-    },
-
-    customStyle:{
-      type:Object,
-      default:null
+    height:{
+        type:String,
+        default:'400px',
     }
-  },
+   },
 
   mounted () { },
 
@@ -40,14 +34,15 @@ export default defineComponent({
 </script>
 
 <template>
-      <p :style="[customStyle, { color: `${color}` }]">{{ title }}</p>
+    <!-- <img src="" alt=""> -->
+    <div class="img"></div>
 </template>
 
 
 <style scoped>
-p{
-  font-size: 2rem;
-  
+img,.img{
+    width: v-bind('width');
+    height: v-bind('height');
+    background-color :gray; 
 }
-
 </style>

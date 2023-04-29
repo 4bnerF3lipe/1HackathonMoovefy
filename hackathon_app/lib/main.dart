@@ -29,6 +29,7 @@ class App extends StatelessWidget {
         return GestureDetector(
             onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
             child: GetMaterialApp(
+                theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFffffff)),
                 debugShowCheckedModeBanner: false,
                 defaultTransition: Transition.native,
                 locale: const Locale('pt', 'BR'),
@@ -38,11 +39,10 @@ class App extends StatelessWidget {
                     name: "/menu",
                     page: () => const MenuPrincipalPage(),
                   ),
-                  // getPages: [
-                  //   GetPage(
-                  //     name: "/perfil",
-                  //     page: () => const PerfilPage(),
-                  //   ),
+                  // GetPage(
+                  //   name: "/menu",
+                  //   page: () => const PerfilPage(),
+                  // ),
                 ]));
       }),
     );

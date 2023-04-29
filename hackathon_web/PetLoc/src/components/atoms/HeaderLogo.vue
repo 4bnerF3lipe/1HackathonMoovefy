@@ -1,6 +1,6 @@
 <script>
 import { defineComponent } from "vue";
-const name = 'CustomHeader'
+const name = 'HeaderLogo'
 
 export default defineComponent({
   name,
@@ -25,16 +25,18 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class ="header">
-
+    <div class="logo">
+        <img src=""/>aaa
     </div>
 </template>
 
 
 <style scoped>
-.header{
-  background-color:tomato ;
-  width: 100%;
-  height: 50px;
+.logo{
+    width:fit-content;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>

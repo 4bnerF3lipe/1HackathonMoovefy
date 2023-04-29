@@ -6,4 +6,7 @@ class Fontes {
   Fontes._internal();
 
   static final double fontePadrao = 15.sp;
+  static final double fonteMedia = 18.sp;
+  static final double fonteGrande = 20.sp;
+  static final double fonteTitulo = 22.sp;
 }
