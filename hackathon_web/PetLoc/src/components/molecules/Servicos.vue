@@ -27,7 +27,7 @@ export default defineComponent({
 
 <template>
   <div class="content">
-    <CustomSubHeader title="Serviços" />
+    <CustomSubHeader title="Serviços" class="title" />
     <div class="service-container">
       <Card />
       <Card />
@@ -43,6 +43,10 @@ export default defineComponent({
 .content {
   background-color: #e6e6e6;
   padding: 28px;
+}
+
+.title {
+  margin-left: 2rem;
 }
 .service-container {
   display: flex;
