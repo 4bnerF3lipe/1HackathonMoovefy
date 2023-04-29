@@ -15,7 +15,7 @@ export default defineComponent({
 
     color:{
       type:String,
-      required:true
+      default:'#707070',
     },
 
     customStyle:{
@@ -40,9 +40,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>
-      <h3 :style="[customStyle, { color: `${color}` }]">{{ title }}</h3>
-    </div>
+      <h2 :style="[customStyle, { color: `${color}` }]">{{ title }}</h2>
 </template>
 
 
