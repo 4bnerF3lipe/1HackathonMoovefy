@@ -1,11 +1,12 @@
 <script>
 import { defineComponent } from "vue";
+import CustomSubHeader from "../components/atoms/CustomSubHeader.vue";
 const name = 'HomeView'
 
 export default defineComponent({
   name,
 
-  components: { }, 
+  components: {CustomSubHeader }, 
 
   props: { },
 
@@ -25,7 +26,9 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>a</div>
+    <div>
+      <CustomSubHeader :title="'CustomSubHeader'" :color="'orange'"  />
+    </div>
 </template>
 
 
