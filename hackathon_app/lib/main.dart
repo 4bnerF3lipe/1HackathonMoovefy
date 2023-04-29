@@ -6,7 +6,7 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:hackathon_app/app/perfil/pages/perfil_page.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
-import 'app/menuprincipal/page/menu_principal_page.dart';
+import 'app/menuprincipal/pages/menu_principal_page.dart';
 
 void main() {
   runApp(const App());

@@ -5,21 +5,8 @@ import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
 import '../../shared/backgrounds/background_base/background_base.dart';
 
-class PerfilPage extends StatefulWidget {
+class PerfilPage extends StatelessWidget {
   const PerfilPage({super.key});
-
-  @override
-  State<PerfilPage> createState() => _PerfilPageState();
-}
-
-class _PerfilPageState extends State<PerfilPage> {
-  // late final PerfilController controller;
-
-  @override
-  void initState() {
-    // controller = Get.put(PerfilController());
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
