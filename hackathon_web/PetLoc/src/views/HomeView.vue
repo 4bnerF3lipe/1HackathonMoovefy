@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import PrimeiraSessao from '../components/template/PrimeiraSessao.vue'
 import SegundaSessao from '../components/organisms/SegundaSessao.vue'
-import TerceiraSessao from '../components/organisms/SegundaSessao.vue'
+import TerceiraSessao from '../components/organisms/TerceiraSessao.vue'
 
 const name = 'HomeView'
 

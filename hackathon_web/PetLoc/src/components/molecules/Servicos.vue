@@ -1,13 +1,13 @@
 <script>
 import { defineComponent } from 'vue'
 import CustomSubHeader from '../atoms/CustomSubHeader.vue'
-import PImage from '../PImage.vue'
+import Card from '../molecules/card.vue'
 const name = 'Servicos'
 
 export default defineComponent({
   name,
 
-  components: { CustomSubHeader, PImage },
+  components: { CustomSubHeader, Card },
 
   props: {},
 
@@ -16,12 +16,7 @@ export default defineComponent({
   updated() {},
 
   data() {
-    return {
-      imgs: {
-        src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-        alt: 'Descrição da imagem'
-      }
-    }
+    return {}
   },
 
   methods: {},
@@ -31,23 +26,29 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
+  <div class="content">
     <CustomSubHeader title="Serviços" />
     <div class="service-container">
-      <PImage :src="imgs.src" :alt="imgs.alt" :customStyle="{ with: '10rem', height: '10rem' }" />
-      <div>
-        <p>Serviços 03</p>
-        <p>Serviços 01</p>
-      </div>
+      <Card />
+      <Card />
+    </div>
+    <div class="service-container">
+      <Card />
+      <Card />
     </div>
   </div>
 </template>
 
 <style scoped>
+.content {
+  background-color: #e6e6e6;
+  padding: 28px;
+}
 .service-container {
-  width: 40%;
-  height: 10rem;
-  background-color: tomato;
   display: flex;
+  gap: 3rem;
+  padding-top: 30px;
+  width: 100%;
+  justify-content: center;
 }
 </style>
