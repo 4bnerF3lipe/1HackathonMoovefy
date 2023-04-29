@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/app/shared/models/cores_aplicativo.dart';
 import 'fontes.dart';
 
 class TextWidget extends StatelessWidget {
@@ -13,7 +14,8 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       texto,
-      style: TextStyle(fontSize: fontSize ?? Fontes.fontePadrao, fontWeight: fontWeight, color: textColor),
+      style: TextStyle(
+          fontSize: fontSize ?? Fontes.fontePadrao, fontWeight: fontWeight, color: textColor ?? CoresAplicativo.textColor),
     );
   }
 }

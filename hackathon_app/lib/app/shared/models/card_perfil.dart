@@ -15,7 +15,10 @@ class CardPerfil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(3.w), color: CoresAplicativo.corSecundaria),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(3.w),
+          color: CoresAplicativo.corBranca,
+          border: Border.all(width: 1, color: CoresAplicativo.cinzaClaro)),
       child: Column(children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,8 +27,11 @@ class CardPerfil extends StatelessWidget {
               children: [
                 Icon(
                   imagem,
-                  size: 13.w,
-                  color: CoresAplicativo.corMarrom,
+                  size: 10.w,
+                  color: CoresAplicativo.corPrimaria,
+                ),
+                SizedBox(
+                  width: 2.w,
                 ),
                 TextWidget(
                   texto: descricao,
@@ -33,7 +39,10 @@ class CardPerfil extends StatelessWidget {
                 ),
               ],
             ),
-            const Icon(Icons.arrow_forward_ios_rounded),
+            const Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: CoresAplicativo.cinzaClaro,
+            ),
           ],
         ),
       ]),
