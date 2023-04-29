@@ -1,13 +1,22 @@
 <script>
 import { defineComponent } from "vue";
-const name = 'PrimeiraSessaoImagem'
+const name = ''
 
 export default defineComponent({
   name,
 
   components: { }, 
 
-  props: { },
+  props: {
+    width:{
+        type:String,
+        default:'400px',
+    },
+    height:{
+        type:String,
+        default:'400px',
+    }
+   },
 
   mounted () { },
 
@@ -25,10 +34,15 @@ export default defineComponent({
 </script>
 
 <template>
-    <div></div>
+    <!-- <img src="" alt=""> -->
+    <div class="img"></div>
 </template>
 
 
 <style scoped>
-
+img,.img{
+    width: v-bind('width');
+    height: v-bind('height');
+    background-color :gray; 
+}
 </style>

@@ -40,9 +40,14 @@ export default defineComponent({
 </script>
 
 <template>
-      <h2 :style="[customStyle, { color: `${color}` }]">{{ title }}</h2>
+      <p :style="[customStyle, { color: `${color}` }]">{{ title }}</p>
 </template>
 
 
 <style scoped>
+p{
+  font-size: 2rem;
+  
+}
+
 </style>

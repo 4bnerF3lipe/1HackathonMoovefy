@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import CustomSubHeader from '../atoms/CustomSubHeader.vue'
 import PImage from '../PImage.vue'
-const name = 'OngsSpace'
+const name = 'ImgSpace'
 
 export default defineComponent({
   name,
@@ -45,8 +45,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <CustomSubHeader title="CONHEÇA NOSSAS ONGs" />
+  <div class="content">
+    <div class="subheader-container">
+      <CustomSubHeader title="Conheça nossas Ongs"/>
+      <CustomSubHeader title="Ver Mais" />
+    </div>
     <ul class="img-container">
       <li v-for="(props, index) in imgs" :key="index">
         <PImage :src="props.src" :alt="props.alt" :customStyle="{ margin: '2rem' }" />
@@ -61,9 +64,18 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .img-container li {
   list-style: none;
+}
+.content{
+  margin:28px;
+}
+.subheader-container{
+  display: flex;
+  width:90%;
+  justify-content: space-between;
 }
 </style>

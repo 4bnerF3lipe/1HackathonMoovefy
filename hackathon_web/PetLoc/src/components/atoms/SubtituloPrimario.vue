@@ -10,7 +10,7 @@ export default defineComponent({
   props: {
     texto:{
         type:String,
-        default:"TITULOTITULOTITULOTITULOTITULOTITULOTITULOTITULO"
+        default:""
     },
     corTexto:{
         type:String,
@@ -42,5 +42,6 @@ export default defineComponent({
 .texto{
     color:v-bind('corTexto');
     font-size: 1.3rem;
+    word-break: break-word;
 }
 </style>

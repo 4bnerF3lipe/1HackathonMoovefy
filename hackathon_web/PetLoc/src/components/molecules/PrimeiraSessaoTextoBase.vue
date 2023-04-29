@@ -9,7 +9,33 @@ export default defineComponent({
 
   components: {TituloPrimaio, SubtituloPrimario }, 
 
-  props: { },
+  props: { 
+    textoPrimario:{
+        type:String,
+        default:""
+    },
+    corTextoPrimario:{
+        type:String,
+        default:"#707070"
+    },
+    textoSecundario:{
+        type:String,
+        default:""
+    },
+    corTextoSecundario:{
+        type:String,
+        default:"#707070"
+    },
+    textoTerceiro:{
+        type:String,
+        default:""
+    },
+    corTextoTerceiro:{
+        type:String,
+        default:"#707070"
+    }
+
+  },
 
   mounted () { },
 
@@ -29,11 +55,11 @@ export default defineComponent({
 <template>
     <div class = "content">
         <div class="conteudo-primario">
-            <titulo-primaio/>
-            <subtitulo-primario/>
+            <titulo-primaio :texto="textoPrimario" :cor-texto="corTextoPrimario"/>
+            <subtitulo-primario :texto="textoSecundario" :cor-texto="corTextoSecundario"/>
         </div>
         <div class="conteudo-secundario">
-            <titulo-primaio />
+            <titulo-primaio   :texto="textoTerceiro" :cor-texto="corTextoTerceiro" />
         </div>
     </div>
 </template>

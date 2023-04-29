@@ -1,12 +1,14 @@
 <script>
 import { defineComponent } from "vue";
-import CustomSubHeader from "../components/atoms/CustomSubHeader.vue";
+import PrimeiraSessao from "../components/template/PrimeiraSessao.vue";
+import SegundaSessao from "../components/organisms/SegundaSessao.vue";
+
 const name = 'HomeView'
 
 export default defineComponent({
   name,
 
-  components: {CustomSubHeader }, 
+  components: { PrimeiraSessao, SegundaSessao }, 
 
   props: { },
 
@@ -27,7 +29,8 @@ export default defineComponent({
 
 <template>
     <div>
-      <CustomSubHeader :title="'CustomSubHeader'" :color="'orange'"  />
+      <PrimeiraSessao/>
+      <SegundaSessao/>
     </div>
 </template>
 

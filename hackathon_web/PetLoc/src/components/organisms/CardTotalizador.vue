@@ -30,8 +30,10 @@ export default defineComponent({
         <div class="content">
             <div class="totalizadores">
                 <ComponenteTotalizador :numero="1000" subtitulo="pets" />
-                <ComponenteTotalizador/>
-                <ComponenteTotalizador/>
+                <div class="vertical-hr"></div>
+                <ComponenteTotalizador :numero="1000" subtitulo="pets" />
+                <div class="vertical-hr"></div>
+                <ComponenteTotalizador :numero="1000" subtitulo="pets" />
             </div>
         </div>
     </div>
@@ -43,11 +45,17 @@ export default defineComponent({
     width: 100%;
     display:flex;
     justify-content: center;
+    align-items: center;
     background-color: #E6E6E6;
+    height: 250px;
 }
 .totalizadores{
     display: flex;
     justify-content: space-between;
     width:40% ;
+}
+.vertical-hr{
+    border-left: 2px solid #707070;
+  height: 80px;
 }
 </style>
