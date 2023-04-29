@@ -38,6 +38,11 @@ class App extends StatelessWidget {
                     name: "/menu",
                     page: () => const MenuPrincipalPage(),
                   ),
+                  // getPages: [
+                  //   GetPage(
+                  //     name: "/perfil",
+                  //     page: () => const PerfilPage(),
+                  //   ),
                 ]));
       }),
     );

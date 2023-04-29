@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/app/shared/models/tamanho.dart';
+
+import '../../models/cores_aplicativo.dart';
 
 class BackgroundBase extends StatelessWidget {
   final Widget child;
