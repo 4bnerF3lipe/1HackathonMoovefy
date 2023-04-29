@@ -1,6 +1,6 @@
 <script>
 import { defineComponent } from "vue";
-const name = 'CustomSubHeader'
+const name = 'SubtituloPrimario'
 
 export default defineComponent({
   name,
@@ -8,21 +8,15 @@ export default defineComponent({
   components: { }, 
 
   props: {
-    title:{
-      type:String,
-      required:true
+    texto:{
+        type:String,
+        default:"TITULOTITULOTITULOTITULOTITULOTITULOTITULOTITULO"
     },
-
-    color:{
-      type:String,
-      default:'#707070',
-    },
-
-    customStyle:{
-      type:Object,
-      default:null
+    corTexto:{
+        type:String,
+        default:"#707070"
     }
-  },
+   },
 
   mounted () { },
 
@@ -40,9 +34,13 @@ export default defineComponent({
 </script>
 
 <template>
-      <h2 :style="[customStyle, { color: `${color}` }]">{{ title }}</h2>
+    <p class="texto">{{ texto }}</p>
 </template>
 
 
 <style scoped>
+.texto{
+    color:v-bind('corTexto');
+    font-size: 1.3rem;
+}
 </style>
