@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
+import 'package:hackathon_app/app/shared/models/text_widget.dart';
 
 import 'cores_aplicativo.dart';
+import 'fontes.dart';
 
 class CardPerfil extends StatelessWidget {
   final IconData imagem;
@@ -25,9 +27,9 @@ class CardPerfil extends StatelessWidget {
                   size: 13.w,
                   color: CoresAplicativo.corMarrom,
                 ),
-                Text(
-                  descricao,
-                  style: TextStyle(fontSize: 5.w),
+                TextWidget(
+                  texto: descricao,
+                  fontSize: Fontes.fonteGrande,
                 ),
               ],
             ),
