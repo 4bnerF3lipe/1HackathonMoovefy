@@ -14,6 +14,10 @@ class MenuPrincipalPage extends StatefulWidget {
 class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
   @override
   Widget build(BuildContext context) {
-    return BackgroundBase();
+    return BackgroundBase(
+      child: Container(
+        color: Colors.red,
+      ),
+    );
   }
 }
