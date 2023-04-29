@@ -29,6 +29,7 @@ class App extends StatelessWidget {
         return GestureDetector(
             onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
             child: GetMaterialApp(
+                theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFffffff)),
                 debugShowCheckedModeBanner: false,
                 defaultTransition: Transition.native,
                 locale: const Locale('pt', 'BR'),
