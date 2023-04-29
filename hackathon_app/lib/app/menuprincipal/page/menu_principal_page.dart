@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:hackathon_app/app/shared/backgrounds/background_base/background_base.dart';
+import 'package:hackathon_app/app/shared/backgrounds/background_menu/background_menu.dart';
 
 class MenuPrincipalPage extends StatefulWidget {
   const MenuPrincipalPage({super.key});
@@ -14,9 +15,9 @@ class MenuPrincipalPage extends StatefulWidget {
 class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
   @override
   Widget build(BuildContext context) {
-    return BackgroundBase(
+    return BackgroundMenu(
       child: Container(
-        color: Colors.red,
+        color: Colors.white,
       ),
     );
   }
