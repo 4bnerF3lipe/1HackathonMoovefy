@@ -32,6 +32,10 @@ export default defineComponent({
       <Card />
       <Card />
     </div>
+    <div class="service-container">
+      <Card />
+      <Card />
+    </div>
   </div>
 </template>
 
