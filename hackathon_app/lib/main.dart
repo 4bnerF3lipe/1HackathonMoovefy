@@ -33,16 +33,16 @@ class App extends StatelessWidget {
                 defaultTransition: Transition.native,
                 locale: const Locale('pt', 'BR'),
                 initialRoute: '/menu',
-                // getPages: [
-                //   GetPage(
-                //     name: "/menu",
-                //     page: () => const MenuPrincipalPage(),
-                //   ),
                 getPages: [
                   GetPage(
                     name: "/menu",
-                    page: () => const PerfilPage(),
+                    page: () => const MenuPrincipalPage(),
                   ),
+                  // getPages: [
+                  //   GetPage(
+                  //     name: "/perfil",
+                  //     page: () => const PerfilPage(),
+                  //   ),
                 ]));
       }),
     );
