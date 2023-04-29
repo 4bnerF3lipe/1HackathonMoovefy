@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:hackathon_app/app/shared/backgrounds/background_base/background_base.dart';
 
 class MenuPrincipalPage extends StatefulWidget {
   const MenuPrincipalPage({super.key});
@@ -13,10 +14,6 @@ class MenuPrincipalPage extends StatefulWidget {
 class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.amber,
-      ),
-    );
+    return BackgroundBase();
   }
 }
