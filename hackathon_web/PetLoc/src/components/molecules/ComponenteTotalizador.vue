@@ -9,7 +9,24 @@ export default defineComponent({
 
   components: { NumerosContagem, SubTituloNumerosContagem }, 
 
-  props: { },
+  props: { 
+    numero:{
+        type: Number,
+        default: 0,
+    },
+    corNumero:{
+        type: String,
+        default: "#707070",
+    },
+    subtitulo:{
+        type: String,
+        default: "N/A",
+    },
+    corsubtitulo:{
+        type: String,
+        default: "#707070",
+    },
+  },
 
   mounted () { },
 
@@ -28,8 +45,8 @@ export default defineComponent({
 
 <template>
     <div>
-    <NumerosContagem numero="123125"/>
-    <SubTituloNumerosContagem subtitulo="pets"/>
+    <NumerosContagem :numero="numero" :cor-numero="corNumero"/>
+    <SubTituloNumerosContagem :subtitulo="subtitulo" :corsubtitulo="corsubtitulo"/>
     </div>
 </template>
 
