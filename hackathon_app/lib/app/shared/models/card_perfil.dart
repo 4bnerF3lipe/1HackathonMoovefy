@@ -14,6 +14,7 @@ class CardPerfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 2.h),
       padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(3.w),

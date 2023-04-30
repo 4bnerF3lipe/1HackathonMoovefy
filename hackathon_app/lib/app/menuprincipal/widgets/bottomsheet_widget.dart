@@ -30,12 +30,14 @@ class BottomSheetBar extends StatelessWidget {
               onPressed: () => tapItem(0),
             ),
             IconButton(
-              icon: Icon(Icons.map_outlined),
+              icon: Icon(
+                Icons.heart_broken,
+              ),
               onPressed: () => tapItem(1),
             ),
             IconButton(
               icon: Icon(
-                Icons.heart_broken,
+                Icons.map_outlined,
               ),
               onPressed: () => tapItem(2),
             ),

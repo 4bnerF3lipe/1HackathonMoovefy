@@ -6,7 +6,7 @@ import '../../adocao/pages/adocao_page.dart';
 import '../pages/dashboard_page.dart';
 
 class MenuPrincipalController extends CoreController {
-  late List<Widget> paginas = <Widget>[DashboardPage(), MapaPage(), AdocaoPage(), PerfilPage()];
+  late List<Widget> paginas = <Widget>[DashboardPage(), AdocaoPage(), MapaPage(), PerfilPage()];
   late Widget? pagina;
   late int indice;
 
