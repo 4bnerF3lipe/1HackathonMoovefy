@@ -16,7 +16,42 @@ export default defineComponent({
   updated() {},
 
   data() {
-    return {}
+    return {
+      cards: [
+        {
+          img: {
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLLiEwRvAp3HwMCV7F010h3lsOBQuOnrGLpA&usqp=CAU',
+            alt: 'Descrição da imagem'
+          },
+          title: 'Title',
+          subtitle: 'Subtitle'
+        },
+        {
+          img: {
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLLiEwRvAp3HwMCV7F010h3lsOBQuOnrGLpA&usqp=CAU',
+            alt: 'Descrição da imagem'
+          },
+          title: 'Title',
+          subtitle: 'Subtitle'
+        },
+        {
+          img: {
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLLiEwRvAp3HwMCV7F010h3lsOBQuOnrGLpA&usqp=CAU',
+            alt: 'Descrição da imagem'
+          },
+          title: 'Title',
+          subtitle: 'Subtitle'
+        },
+        {
+          img: {
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLLiEwRvAp3HwMCV7F010h3lsOBQuOnrGLpA&usqp=CAU',
+            alt: 'Descrição da imagem'
+          },
+          title: 'Title',
+          subtitle: 'Subtitle'
+        }
+      ]
+    }
   },
 
   methods: {},
@@ -26,16 +61,15 @@ export default defineComponent({
 </script>
 
 <template>
+  <div class="title">
+    <CustomSubHeader title="Serviços" />
+  </div>
   <div class="content">
-    <CustomSubHeader title="Serviços" class="title" />
-    <div class="service-container">
-      <Card />
-      <Card />
-    </div>
-    <div class="service-container">
-      <Card />
-      <Card />
-    </div>
+    <ul class="service-container">
+      <li v-for="(props, index) in cards" :key="index">
+        <Card :img="props.img" :title="props.title" :subtitle="props.subtitle" />
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -43,19 +77,32 @@ export default defineComponent({
 .content {
   /* background-color: #e6e6e6; */
   padding: 28px;
-  display:flex;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+.title {
+  margin-top: 1rem;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
 
 .service-container {
+  flex-wrap: wrap;
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
   padding-top: 30px;
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.service-container li {
+  list-style: none;
+  width: 40%;
 }
 </style>
