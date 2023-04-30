@@ -29,7 +29,7 @@ class BackgroundMenu extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
           onPressed: () => tapAcoesRapidas,
-          backgroundColor: CoresAplicativo.corAmarelo,
+          backgroundColor: CoresAplicativo.corMarrom,
           child: SvgPicture.asset(AssetsAplicativo.locationadd)),
     );
   }

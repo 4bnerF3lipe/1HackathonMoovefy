@@ -29,21 +29,33 @@ class BottomSheetBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             GestureDetector(
-              child: TabBarItemWidget(svg: AssetsAplicativo.homeSelecionado),
-              onTap: () => tapItem(0),
+              onTap: () => {
+                tapItem(0),
+              },
+              child: TabBarItemWidget(
+                  svg: tabItemSelected == 0 ? AssetsAplicativo.homeSelecionado : AssetsAplicativo.homeDescelecionada),
             ),
             GestureDetector(
-              child: TabBarItemWidget(svg: AssetsAplicativo.petDescelecionado),
-              onTap: () => tapItem(1),
+              onTap: () => {
+                tapItem(1),
+              },
+              child: TabBarItemWidget(
+                  svg: tabItemSelected == 1 ? AssetsAplicativo.petSelecionado : AssetsAplicativo.petDescelecionado),
             ),
             SizedBox(width: 10.w),
             GestureDetector(
-              child: TabBarItemWidget(svg: AssetsAplicativo.mapaDescelecionado),
-              onTap: () => tapItem(2),
+              onTap: () => {
+                tapItem(2),
+              },
+              child: TabBarItemWidget(
+                  svg: tabItemSelected == 2 ? AssetsAplicativo.mapaSelecionado : AssetsAplicativo.mapaDescelecionado),
             ),
             GestureDetector(
-              child: TabBarItemWidget(svg: AssetsAplicativo.userDescelecionado),
-              onTap: () => tapItem(3),
+              onTap: () => {
+                tapItem(3),
+              },
+              child: TabBarItemWidget(
+                  svg: tabItemSelected == 3 ? AssetsAplicativo.userSelecionado : AssetsAplicativo.userDescelecionado),
             ),
           ],
         ),

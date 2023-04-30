@@ -33,8 +33,12 @@ class AdocaoPage extends StatelessWidget {
                     contentPadding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 4.w),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.w)),
                     hintText: 'O que você procura?',
-                    icon: const Icon(Icons.search),
-                    iconColor: CoresAplicativo.corPrimaria,
+                    hintStyle: TextStyle(
+                      color: CoresAplicativo.cinzaClaro,
+                      // other TextStyle properties
+                    ),
+                    suffixIcon: const Icon(Icons.search),
+                    suffixIconColor: CoresAplicativo.cinzaClaro,
                     enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: CoresAplicativo.cinzaClaro,
@@ -56,7 +60,7 @@ class AdocaoPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                   Icon(
-                    Icons.filter_list_alt,
+                    Icons.tune_rounded,
                     color: CoresAplicativo.textColor,
                   )
                 ],
