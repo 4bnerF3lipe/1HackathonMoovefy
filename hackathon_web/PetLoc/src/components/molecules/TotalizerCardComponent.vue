@@ -1,13 +1,13 @@
 <script>
 import { defineComponent } from 'vue'
 import PSubTitle from '../atoms/PSubTitle.vue'
-import PTitle from '../atoms/PTitle.vue'
+import Vue3autocounter from 'vue3-autocounter'
 const name = 'TotalizerCardComponent'
 
 export default defineComponent({
   name,
 
-  components: { PSubTitle, PTitle },
+  components: { PSubTitle, Vue3autocounter },
 
   props: {
     numero: {
@@ -44,7 +44,17 @@ export default defineComponent({
 
 <template>
   <div class="box-totalizer">
-    <PTitle :text="numero" :textColor="corNumero" class="text-count" />
+    <Vue3autocounter
+      ref="counter"
+      :startAmount="0"
+      :endAmount="numero"
+      :duration="6"
+      separator=","
+      decimalSeparator="."
+      :decimals="2"
+      :autoinit="true"
+      class="text-count"
+    />
     <PSubTitle :text="subtitulo" :textColor="corsubtitulo" class="text-description" />
   </div>
 </template>
@@ -55,6 +65,7 @@ export default defineComponent({
 }
 .text-count {
   font-size: 2rem;
+  color: v-bind('corNumero');
 }
 .text-description {
   font-size: 1.3rem;
