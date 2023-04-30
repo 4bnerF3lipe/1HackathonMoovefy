@@ -10,7 +10,7 @@ class BackgroundMenu extends StatelessWidget {
   final int tabItemSelected;
   final void Function(int) tapBottomItem;
   final void Function() tapAcoesRapidas;
-  final Widget? child;
+  final Widget child;
   const BackgroundMenu(
       {super.key,
       required this.child,

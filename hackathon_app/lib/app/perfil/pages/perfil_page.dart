@@ -80,11 +80,11 @@ class PerfilPage extends StatelessWidget {
             SizedBox(
               height: 2.h,
             ),
-            const CardPerfil(descricao: "Apadrinhar um animal", imagem: Icons.heart_broken_rounded),
+            const CardBasicWidget(titulo: "Apadrinhar um animal"),
             SizedBox(
               height: 2.h,
             ),
-            const CardPerfil(descricao: "Sair", imagem: Icons.exit_to_app),
+            const CardBasicWidget(titulo: "Sair"),
           ],
         ),
       ),

@@ -7,6 +7,7 @@ class Fontes {
 
   static final double fontePadrao = 15.sp;
   static final double fonteMedia = 18.sp;
+  static final double fonteMediaPequena = 14.sp;
   static final double fonteGrande = 20.sp;
   static final double fonteTitulo = 22.sp;
 }

@@ -5,48 +5,43 @@ import 'package:hackathon_app/app/shared/models/text_widget.dart';
 import 'cores_aplicativo.dart';
 import 'fontes.dart';
 
-class CardPerfil extends StatelessWidget {
-  final IconData imagem;
-  final String descricao;
+class CardBasicWidget extends StatelessWidget {
+  final String titulo;
+  final double? height;
 
-  const CardPerfil({super.key, required this.descricao, required this.imagem});
+  const CardBasicWidget({super.key, required this.titulo, this.height});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 2.h),
-      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(3.w),
-          color: CoresAplicativo.corBranca,
-          border: Border.all(width: 1, color: CoresAplicativo.cinzaClaro)),
-      child: Column(children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Icon(
-                  imagem,
-                  size: 10.w,
-                  color: CoresAplicativo.corPrimaria,
+    return Expanded(
+      child: Container(
+        height: height,
+        margin: EdgeInsets.only(top: 2.h),
+        padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(3.w),
+            color: CoresAplicativo.corBranca,
+            border: Border.all(width: 1, color: CoresAplicativo.cinzaClaro)),
+        child: Column(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextWidget(
+                texto: titulo,
+                fontSize: Fontes.fontePadrao,
+                fontWeight: FontWeight.w500,
+              ),
+              const Align(
+                alignment: Alignment.centerRight,
+                child: Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: CoresAplicativo.cinzaClaro,
                 ),
-                SizedBox(
-                  width: 2.w,
-                ),
-                TextWidget(
-                  texto: descricao,
-                  fontSize: Fontes.fonteGrande,
-                ),
-              ],
-            ),
-            const Icon(
-              Icons.arrow_forward_ios_rounded,
-              color: CoresAplicativo.cinzaClaro,
-            ),
-          ],
-        ),
-      ]),
+              ),
+            ],
+          ),
+        ]),
+      ),
     );
   }
 }
