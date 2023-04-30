@@ -6,8 +6,10 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:hackathon_app/app/chat/page/chat_page.dart';
 import 'package:hackathon_app/app/perfil/pages/perfil_page.dart';
+import 'package:hackathon_app/app/shared/models/cores_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
+import 'app/adocao/pages/adocao_page.dart';
 import 'app/menuprincipal/pages/menu_principal_page.dart';
 
 void main() async {
@@ -36,6 +38,7 @@ class App extends StatelessWidget {
                 theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFffffff)),
                 debugShowCheckedModeBanner: false,
                 defaultTransition: Transition.native,
+                color: CoresAplicativo.corFundoPagina,
                 locale: const Locale('pt', 'BR'),
                 initialRoute: '/menu',
                 getPages: [
@@ -43,6 +46,10 @@ class App extends StatelessWidget {
                     name: "/menu",
                     page: () => const MenuPrincipalPage(),
                   ),
+                  // GetPage(
+                  //   name: "/menu",
+                  //   page: () => const AdocaoPage(),
+                  // ),
                 ]));
       }),
     );

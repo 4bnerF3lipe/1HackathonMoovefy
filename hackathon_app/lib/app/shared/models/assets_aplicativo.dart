@@ -10,4 +10,7 @@ class AssetsAplicativo {
   static const String locationadd = '$_pathSvg/location-add.svg';
   static const String cardong = '$_pathSvg/heart-tick.svg';
   static const String cardshop = '$_pathSvg/shop.svg';
+  static const String perfilUsuario = '$_pathSvg/profile-circle.svg';
+  static const String localizacaoPetPerdido = '$_pathSvg/location-add.svg';
+  static const String header = '$_pathSvg/header.svg';
 }
