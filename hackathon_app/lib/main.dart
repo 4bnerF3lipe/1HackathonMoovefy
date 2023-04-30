@@ -15,6 +15,7 @@ import 'app/menuprincipal/pages/menu_principal_page.dart';
 void main() async {
   await Future.delayed(const Duration(seconds: 2));
   FlutterNativeSplash.remove();
+
   runApp(const App());
 }
 
