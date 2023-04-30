@@ -35,11 +35,11 @@ export default defineComponent({
 <template>
   <div>
     <ul class="img-container">
-      <img src="../../assets/imgs/Patrocinadores/Grupo 76.png" @click="handlePopup" />
-      <img src="../../assets/imgs/Patrocinadores/Grupo 77.png" @click="handlePopup" />
-      <img src="../../assets/imgs/Patrocinadores/Grupo 78.png" @click="handlePopup" />
-      <img src="../../assets/imgs/Patrocinadores/Grupo 79.png" @click="handlePopup" />
-      <img src="../../assets/imgs/Patrocinadores/Grupo 80.png" @click="handlePopup" />
+      <img src="../../assets/imgs/Patrocinadores/Grupo 76.png" />
+      <img src="../../assets/imgs/Patrocinadores/Grupo 77.png" />
+      <img src="../../assets/imgs/Patrocinadores/Grupo 78.png" />
+      <img src="../../assets/imgs/Patrocinadores/Grupo 79.png" />
+      <img src="../../assets/imgs/Patrocinadores/Grupo 80.png" />
     </ul>
 
     <div class="button-container">

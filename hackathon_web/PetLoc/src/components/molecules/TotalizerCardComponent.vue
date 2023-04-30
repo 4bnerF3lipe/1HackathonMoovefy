@@ -48,10 +48,8 @@ export default defineComponent({
       ref="counter"
       :startAmount="0"
       :endAmount="numero"
-      :duration="6"
-      separator=","
-      decimalSeparator="."
-      :decimals="2"
+      :duration="20"
+      separator="."
       :autoinit="true"
       class="text-count"
     />
