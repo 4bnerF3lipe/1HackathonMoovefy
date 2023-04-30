@@ -1,7 +1,7 @@
 <script>
 import { defineComponent } from 'vue'
 import PrimeiraSessao from '../components/template/PrimeiraSessao.vue'
-import SegundaSessao from '../components/organisms/SegundaSessao.vue'
+import SegundaSessao from '../components/template/SegundaSessao.vue'
 import TerceiraSessao from '../components/organisms/TerceiraSessao.vue'
 import Popup from '../components/molecules/Popup.vue'
 
@@ -20,13 +20,12 @@ export default defineComponent({
 
   data() {
     return {
-      isVisible: true
+      isVisible: false
     }
   },
 
   methods: {
     handlePopup() {
-      console.log('Nhapo')
       this.isVisible = !this.isVisible
     }
   },

@@ -47,8 +47,8 @@ export default defineComponent({
   gap: 1rem;
   width: 40%;
   border-radius: 18px;
-  background-color: #fff;
   padding: 20px;
+  border: 4px solid #bdbdbd;
 }
 
 .card img {

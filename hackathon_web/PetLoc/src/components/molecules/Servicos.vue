@@ -41,18 +41,21 @@ export default defineComponent({
 
 <style scoped>
 .content {
-  background-color: #e6e6e6;
+  /* background-color: #e6e6e6; */
   padding: 28px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.title {
-  margin-left: 2rem;
-}
+
 .service-container {
   display: flex;
   gap: 3rem;
   padding-top: 30px;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 </style>

@@ -43,5 +43,6 @@ export default defineComponent({
     color:v-bind('corTexto');
     font-size: 1.3rem;
     word-break: break-word;
+    text-align: left;
 }
 </style>
