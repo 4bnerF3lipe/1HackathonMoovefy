@@ -13,4 +13,5 @@ class CoresAplicativo {
   static const Color cinzaClaro = Color(0xFFCFCCCC);
   static const Color corBranca = Color(0xFFffffff);
   static const Color textColor = Color(0xFF707070);
+  static const Color corDetalhe = Color(0xFF4F7575);
 }
