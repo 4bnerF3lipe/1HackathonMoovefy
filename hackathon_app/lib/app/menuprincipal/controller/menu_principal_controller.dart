@@ -6,26 +6,19 @@ import '../../adocao/pages/adocao_page.dart';
 import '../pages/dashboard_page.dart';
 
 class MenuPrincipalController extends CoreController {
-  late List<Widget> paginas = [];
+  late List<Widget> paginas = <Widget>[DashboardPage(), MapaPage(), AdocaoPage(), PerfilPage()];
   late Widget? pagina;
-  late TabController tabController;
+  late int indice;
 
-  MenuPrincipalController(TickerProvider tick) {
-    tabController = TabController(length: 4, vsync: tick);
-    paginas = [const DashboardPage(), const MapaPage(), const AdocaoPage(), const PerfilPage()];
+  MenuPrincipalController() {
+    indice = 0;
     pagina = paginas[0];
   }
   @override
   void iniciaControlador() {}
 
-  void selecionaPagina(int indice) {
-    tabController.index = indice;
-  }
-
-  @override
-  void dispose() {
-    tabController.dispose();
-    super.dispose();
+  void selecionaPagina(int i) {
+    indice = i;
   }
 
   acoesRapidas() {}

@@ -5,7 +5,7 @@ import '../../../menuprincipal/widgets/bottomsheet_widget.dart';
 import '../../models/cores_aplicativo.dart';
 
 class BackgroundMenu extends StatelessWidget {
-  final TabController tabController;
+  final int tabItemSelected;
   final void Function(int) tapBottomItem;
   final void Function() tapAcoesRapidas;
   final Widget? child;
@@ -14,7 +14,7 @@ class BackgroundMenu extends StatelessWidget {
       required this.child,
       required this.tapAcoesRapidas,
       required this.tapBottomItem,
-      required this.tabController});
+      required this.tabItemSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class BackgroundMenu extends StatelessWidget {
         body: child,
         bottomNavigationBar: BottomSheetBar(
           tapItem: tapBottomItem,
-          tabController: tabController,
+          tabItemSelected: tabItemSelected,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(

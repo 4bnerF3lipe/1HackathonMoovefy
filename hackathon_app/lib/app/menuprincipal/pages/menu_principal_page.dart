@@ -14,22 +14,25 @@ class MenuPrincipalPage extends StatefulWidget {
   State<MenuPrincipalPage> createState() => _MenuPrincipalPageState();
 }
 
-class _MenuPrincipalPageState extends State<MenuPrincipalPage> with SingleTickerProviderStateMixin {
+class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
   late MenuPrincipalController controller;
-
+  int _selectedIndex = 0;
   @override
   void initState() {
-    controller = MenuPrincipalController(this);
+    controller = MenuPrincipalController();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return BackgroundMenu(
-      tabController: controller.tabController,
-      child: TabBarView(controller: controller.tabController, children: controller.paginas),
+      tabItemSelected: _selectedIndex,
+      child: controller.paginas.elementAt(_selectedIndex),
       tapBottomItem: (i) {
         controller.selecionaPagina(i);
+        setState(() {
+          _selectedIndex = i;
+        });
       },
       tapAcoesRapidas: () => controller.acoesRapidas(),
     );
