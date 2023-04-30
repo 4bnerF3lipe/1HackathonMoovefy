@@ -67,7 +67,8 @@ export default defineComponent({
   list-style: none;
 }
 .content{
-  margin:28px;
+  margin-top:28px;
+  margin-bottom:28px;
 }
 .subheader-container{
   display: flex;

@@ -67,7 +67,7 @@ export default defineComponent({
   <div class="content">
     <ul class="service-container">
       <li v-for="(props, index) in cards" :key="index">
-        <Card :img="props.img" :title="props.title" :subtitle="props.subtitle" />
+        <Card :img="props.img" :title="props.title" :subtitle="props.subtitle" class="card"/>
       </li>
     </ul>
   </div>
@@ -76,7 +76,8 @@ export default defineComponent({
 <style scoped>
 .content {
   /* background-color: #e6e6e6; */
-  padding: 28px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -90,7 +91,9 @@ export default defineComponent({
   width: 90%;
   justify-content: space-between;
 }
-
+.card{
+  width: 100%;
+}
 .service-container {
   flex-wrap: wrap;
   display: flex;

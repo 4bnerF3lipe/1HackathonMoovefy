@@ -32,7 +32,9 @@ export default defineComponent({
 
 <template>
     <div class ="header">
-      <HeaderLogo/>
+      <div class="content">
+        <HeaderLogo/>
+      </div>
     </div>
 </template>
 
@@ -46,6 +48,9 @@ export default defineComponent({
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 8px;
+  
+}
+.content{
+  width: 80%;
 }
 </style>

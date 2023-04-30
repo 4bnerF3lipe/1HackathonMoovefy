@@ -14,7 +14,7 @@ export default defineComponent({
     },
     height:{
         type:String,
-        default:'400px',
+        default:'100px',
     }
    },
 

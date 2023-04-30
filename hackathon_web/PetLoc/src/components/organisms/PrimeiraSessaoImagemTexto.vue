@@ -46,8 +46,8 @@ export default defineComponent({
     display: flex;
     width: 100%;
     height: 100%;
-    margin: 28px;
-  
+    margin-top: 28px;
+    margin-top: 28px;
 }
 .texto,.img{
   width: 50%;
