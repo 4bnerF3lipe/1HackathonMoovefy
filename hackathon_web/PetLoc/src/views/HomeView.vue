@@ -1,9 +1,9 @@
 <script>
 import { defineComponent } from 'vue'
 import FirstSection from '../components/template/FirstSection.vue'
-import SegundaSessao from '../components/template/SegundaSessao.vue'
-import TerceiraSessao from '../components/organisms/TerceiraSessao.vue'
+import SecondSection from '../components/template/SecondSection.vue'
 
+import TerceiraSessao from '../components/organisms/TerceiraSessao.vue'
 import QuartaSessao from '../components/template/QuartaSessao.vue'
 
 const name = 'HomeView'
@@ -11,7 +11,7 @@ const name = 'HomeView'
 export default defineComponent({
   name,
 
-  components: { FirstSection, SegundaSessao, TerceiraSessao, QuartaSessao },
+  components: { FirstSection, SecondSection, TerceiraSessao, QuartaSessao },
 
   props: {},
 
@@ -32,7 +32,7 @@ export default defineComponent({
 <template>
   <div>
     <FirstSection />
-    <SegundaSessao />
+    <SecondSection />
     <TerceiraSessao />
     <QuartaSessao />
   </div>
