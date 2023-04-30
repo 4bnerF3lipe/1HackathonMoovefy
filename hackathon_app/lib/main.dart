@@ -4,6 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:hackathon_app/app/chat/page/chat_page.dart';
 import 'package:hackathon_app/app/perfil/pages/perfil_page.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
@@ -38,14 +39,14 @@ class App extends StatelessWidget {
                 locale: const Locale('pt', 'BR'),
                 initialRoute: '/menu',
                 getPages: [
-                  GetPage(
-                    name: "/menu",
-                    page: () => const MenuPrincipalPage(),
-                  ),
                   // GetPage(
                   //   name: "/menu",
-                  //   page: () => const PerfilPage(),
+                  //   page: () => const MenuPrincipalPage(),
                   // ),
+                  GetPage(
+                    name: "/menu",
+                    page: () => const ChatPage(),
+                  ),
                 ]));
       }),
     );
