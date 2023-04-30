@@ -14,4 +14,11 @@ class AssetsAplicativo {
   static const String localizacaoPetPerdido = '$_pathSvg/location-add.svg';
   static const String header = '$_pathSvg/header.svg';
   static const String petlocktext = '$_pathSvg/PETLOC.svg';
+
+  static const String cat1 = '$_pathPng/cat1.png';
+  static const String cat2 = '$_pathPng/cat2.png';
+  static const String cat3 = '$_pathPng/cat3.png';
+  static const String dog1 = '$_pathPng/dog1.png';
+  static const String dog2 = '$_pathPng/dog2.png';
+  static const String dog3 = '$_pathPng/dog3.png';
 }
