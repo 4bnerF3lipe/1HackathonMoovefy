@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import CustomSubHeader from '../atoms/CustomSubHeader.vue'
 import PImage from '../PImage.vue'
-const name = 'ImgSpace'
+const name = 'ImgSpaceOng'
 
 export default defineComponent({
   name,
@@ -47,19 +47,21 @@ export default defineComponent({
       <CustomSubHeader :title="segundoTitulo" color="#5e454b" class="ver-mais" v-if="segundoTitulo"/>
     </div>
     <ul class="img-container">
-      <li v-for="(props, index) in imgs" :key="index">
-        <PImage :src="props.src" :alt="props.alt" :customStyle="{ margin: '2rem' }" />
-      </li>
+        <img src="../../assets/imgs/ongs/a.png" class="image" />
+        <img src="../../assets/imgs/ongs/Grupo 72.png" class="image" />
+        <img src="../../assets/imgs/ongs/Grupo 73.png" class="image" />
+        <img src="../../assets/imgs/ongs/Grupo 74.png" class="image" />
     </ul>
   </div>
 </template>
 
 <style scoped>
 .img-container {
-  width: 100%;
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
+  
 
 }
 

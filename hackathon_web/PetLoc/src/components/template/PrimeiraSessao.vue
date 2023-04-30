@@ -29,8 +29,8 @@ export default defineComponent({
 
 <template>
     <div class="content">
-        <header-base/>
-        <PrimeiraSessaoImagemTexto/>
+        <header-base cor-fundo="#cee5d0"/>
+        <PrimeiraSessaoImagemTexto />
         <CardTotalizador/>
     </div>
 </template>

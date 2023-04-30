@@ -26,7 +26,7 @@ export default defineComponent({
 
 <template>
     <div class="logo">
-        <img src=""/>aaa
+        <img src="../../assets/imgs/LOGO.svg"/>
     </div>
 </template>
 

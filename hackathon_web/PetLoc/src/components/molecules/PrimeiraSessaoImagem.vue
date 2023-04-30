@@ -34,8 +34,8 @@ export default defineComponent({
 </script>
 
 <template>
-    <!-- <img src="" alt=""> -->
-    <div class="img"></div>
+    <img src="../../assets/imgs/Imagem.svg" alt="">
+    <!-- <div class="img"></div> -->
 </template>
 
 
@@ -43,6 +43,6 @@ export default defineComponent({
 img,.img{
     width: v-bind('width');
     height: v-bind('height');
-    background-color :gray; 
+    
 }
 </style>

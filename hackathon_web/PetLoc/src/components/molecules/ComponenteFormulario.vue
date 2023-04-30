@@ -45,7 +45,7 @@ export default defineComponent({
 
 <template>
     <div>
-    <TextosPadroesPopups :inputText="inputText" :corInputText="corInputText"/>
+    <TextosPadroesPopups :texto-pagina="inputText" :corInputText="corInputText"/>
     <InputTextFormulario :textoPagina="textoPagina" :corTextoPagina="corTextoPagina"/>
     </div>
 </template>

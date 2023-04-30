@@ -43,5 +43,6 @@ export default defineComponent({
     margin-top: 8px;
     margin-bottom: 8px;
     color: v-bind('corTextoPagina');
+    text-align: left;
 }
 </style>

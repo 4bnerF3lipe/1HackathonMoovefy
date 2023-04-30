@@ -15,4 +15,5 @@ class CoresAplicativo {
   static const Color corBranca = Color(0xFFffffff);
   static const Color textColor = Color(0xFF707070);
   static const Color corFundoPagina = Color(0xFFF7F7F7);
+  static const Color corDetalhe = Color(0xFF4F7575);
 }

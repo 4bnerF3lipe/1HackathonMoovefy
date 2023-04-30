@@ -1,12 +1,13 @@
 <script>
 import { defineComponent } from "vue";
-import ImgSpace from "../molecules/ImgSpace.vue";
+import ImgSpaceOng from "../molecules/ImgSpaceOng.vue";
+
 const name = 'SegundaSessao'
 
 export default defineComponent({
   name,
 
-  components: { ImgSpace }, 
+  components: { ImgSpaceOng }, 
 
   props: { },
 
@@ -16,24 +17,7 @@ export default defineComponent({
 
   data () { 
     return { 
-      imgs: [
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        },
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        },
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        },
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        }
-      ]
+      
     }
   },
 
@@ -46,7 +30,7 @@ export default defineComponent({
 
 <template>
     <div class = "content">
-        <ImgSpace :imgs="imgs" primeiro-titulo="Conheça nossa ONGs" segundo-titulo="Ver Mais"/>
+        <ImgSpaceOng :imgs="imgs" primeiro-titulo="CONHEÇA NOSSAS ONGS"  segundo-titulo="Ver Mais"/>
         <hr>
     </div>
 </template>

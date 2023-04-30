@@ -47,9 +47,31 @@ export default defineComponent({
       <CustomSubHeader :title="segundoTitulo" color="#5e454b" class="ver-mais" v-if="segundoTitulo"/>
     </div>
     <ul class="img-container">
-      <li v-for="(props, index) in imgs" :key="index">
-        <PImage :src="props.src" :alt="props.alt" :customStyle="{ margin: '2rem' }" />
-      </li>
+      <div class="card">
+    <div class="box-imag">
+       <img src="../../assets/imgs/Patrocinadores/Grupo 76.png"/>
+    </div>
+  </div>
+  <div class="card">
+    <div class="box-imag">
+       <img src="../../assets/imgs/Patrocinadores/Grupo 77.png"/>
+    </div>
+  </div>
+  <div class="card">
+    <div class="box-imag">
+       <img  src="../../assets/imgs/Patrocinadores/Grupo 78.png"/>
+    </div>
+  </div>
+  <div class="card">
+    <div class="box-imag">
+       <img  src="../../assets/imgs/Patrocinadores/Grupo 79.png"/>
+    </div>
+  </div>
+  <div class="card">
+    <div class="box-imag">
+       <img  src="../../assets/imgs/Patrocinadores/Grupo 80.png"/>
+    </div>
+  </div>
     </ul>
   </div>
 </template>

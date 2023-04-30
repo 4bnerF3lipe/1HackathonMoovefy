@@ -43,7 +43,7 @@ export default defineComponent({
 .header{
   background-color:v-bind('corFundo') ;
   width: 100%;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -52,5 +52,10 @@ export default defineComponent({
 }
 .content{
   width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 </style>

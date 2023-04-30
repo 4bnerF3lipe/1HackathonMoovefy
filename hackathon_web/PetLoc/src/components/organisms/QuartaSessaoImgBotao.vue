@@ -1,13 +1,15 @@
 <script>
 import { defineComponent } from "vue";
-import ImgSpace from "../molecules/ImgSpace.vue";
+import ImgSpacePatrocinador from "../molecules/ImgSpacePatrocinador.vue";
 import CustomButton from "../atoms/CustomButton.vue";
+import PopupPatrocinador from '../molecules/PopupPatrocinador.vue'
+import PopupFormulario from '../organisms/PopupFormulario.vue'
 const name = 'QuartaSessaoImgBotao'
 
 export default defineComponent({
   name,
 
-  components: { ImgSpace, CustomButton }, 
+  components: { CustomButton, PopupPatrocinador, PopupFormulario, ImgSpacePatrocinador }, 
 
   props: { },
 
@@ -34,11 +36,16 @@ export default defineComponent({
           src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
           alt: 'Descrição da imagem'
         }
-      ]
+      ],
+      isVisible: false
     }
   },
 
-  methods: { },
+  methods: {
+    handlePopup() {
+      this.isVisible = !this.isVisible
+    }
+   },
 
   computed: { }, 
 
@@ -47,11 +54,12 @@ export default defineComponent({
 
 <template>
     <div>
-        <ImgSpace  class = "content" :imgs="imgs" primeiro-titulo="Patrocinadores" />
+        <ImgSpacePatrocinador  class = "content" :imgs="imgs" primeiro-titulo="Patrocinadores" />
         <div class="button-container">
-          <CustomButton class ="Button" texto="Torne-se um patrocinador"/>
+          <CustomButton class ="Button" texto="Torne-se um patrocinador" @click="handlePopup"/>
         </div>
-
+        
+        <PopupPatrocinador :visible="isVisible" :click="handlePopup" > <PopupFormulario/> </PopupPatrocinador>
     </div>
 </template>
 
@@ -71,10 +79,17 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top:20px;
+  margin-bottom: 20px;
 }
 .Button{
   width: 20%;
-  height: 32px;
+  height: 48px;
   margin:20px;
+  border-radius: 32px;
+  font-size: 1.1rem;
+}
+.Button:hover{
+  cursor:pointer
 }
 </style>
