@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="448" height="88" viewBox="0 0 448 88">
+  <defs>
+    <filter id="tabview" x="0" y="0" width="448" height="88" filterUnits="userSpaceOnUse">
+      <feOffset dy="-3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.09"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#tabview)">
+    <path id="tabview-2" data-name="tabview" d="M430,115H0V64A19,19,0,0,1,19,45H175.309a40,40,0,0,0,79.381,0H411a19,19,0,0,1,19,19Z" transform="translate(9 -33)" fill="#fff"/>
+  </g>
+</svg>
