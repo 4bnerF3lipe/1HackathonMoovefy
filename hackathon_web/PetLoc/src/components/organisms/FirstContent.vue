@@ -3,8 +3,6 @@ import { defineComponent } from 'vue'
 import PTitle from '../atoms/PTitle.vue'
 import PSubTitle from '../atoms/PSubTitle.vue'
 import CustomButton from '../atoms/CustomButton.vue'
-import PopupPatrocinador from '../molecules/PopupPatrocinador.vue'
-import PopupFormulario from '../molecules/PopupFormulario.vue'
 
 const name = 'FirstContent'
 
@@ -46,10 +44,6 @@ export default defineComponent({
       <div class="button-container">
         <CustomButton class="Button" texto="Conheça nossos serviços" @click="handlePopup" />
       </div>
-
-      <!-- <PopupPatrocinador :visible="isVisible" :click="handlePopup">
-        <PopupFormulario />
-      </PopupPatrocinador> -->
     </div>
     <div class="box-image">
       <img src="../../assets/imgs/Imagem.svg" />
