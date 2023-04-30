@@ -30,13 +30,10 @@ class BackgroundMenu extends StatelessWidget {
           onPressed: () => tapAcoesRapidas,
           tooltip: 'Create',
           elevation: 10.h,
-          backgroundColor: Colors.grey[300],
-          child: Transform.rotate(
-            angle: -20,
-            child: const Icon(
-              Icons.send,
-              color: CoresAplicativo.corMarrom,
-            ),
+          backgroundColor: CoresAplicativo.corAmarelo,
+          child: const Icon(
+            Icons.send,
+            color: CoresAplicativo.corMarrom,
           ),
         ),
       ),

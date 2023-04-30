@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hackathon_app/app/shared/models/assets_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/cores_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
+import 'package:hackathon_app/app/shared/widgets/TabBarWidget.dart';
 
 class BottomSheetBar extends StatelessWidget {
   final int tabItemSelected;
@@ -23,25 +26,24 @@ class BottomSheetBar extends StatelessWidget {
           ],
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.home),
-              onPressed: () => tapItem(0),
+            GestureDetector(
+              child: TabBarItemWidget(svg: AssetsAplicativo.homeSelecionado),
+              onTap: () => tapItem(0),
             ),
-            IconButton(
-              icon: Icon(Icons.map_outlined),
-              onPressed: () => tapItem(1),
+            GestureDetector(
+              child: TabBarItemWidget(svg: AssetsAplicativo.petDescelecionado),
+              onTap: () => tapItem(1),
             ),
-            IconButton(
-              icon: Icon(
-                Icons.heart_broken,
-              ),
-              onPressed: () => tapItem(2),
+            SizedBox(width: 10.w),
+            GestureDetector(
+              child: TabBarItemWidget(svg: AssetsAplicativo.mapaDescelecionado),
+              onTap: () => tapItem(2),
             ),
-            IconButton(
-              icon: Icon(Icons.person),
-              onPressed: () => tapItem(3),
+            GestureDetector(
+              child: TabBarItemWidget(svg: AssetsAplicativo.userDescelecionado),
+              onTap: () => tapItem(3),
             ),
           ],
         ),
