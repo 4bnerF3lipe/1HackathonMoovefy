@@ -8,7 +8,20 @@ export default defineComponent({
 
   components: { PImage },
 
-  props: {},
+  props: {
+    img: {
+      type: Object,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    subtitle: {
+      type: String,
+      required: true
+    }
+  },
 
   mounted() {},
 
@@ -32,11 +45,11 @@ export default defineComponent({
 <template>
   <div class="card">
     <div class="box-imag">
-      <PImage :src="imgs.src" :alt="imgs.alt" />
+      <PImage :src="img.src" :alt="img.alt" />
     </div>
     <div class="box-text">
-      <h1>Serviços 03</h1>
-      <h3>Serviços 01</h3>
+      <h1>{{ title }}</h1>
+      <h3>{{ subtitle }}</h3>
     </div>
   </div>
 </template>
@@ -45,10 +58,10 @@ export default defineComponent({
 .card {
   display: flex;
   gap: 1rem;
-  width: 40%;
+  width: 100%;
   border-radius: 18px;
-  background-color: #fff;
   padding: 20px;
+  border: 4px solid #bdbdbd;
 }
 
 .card img {

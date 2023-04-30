@@ -1,6 +1,6 @@
 <script>
 import { defineComponent } from "vue";
-const name = ''
+const name = 'InputTextFormulario'
 
 export default defineComponent({
   name,
@@ -8,13 +8,9 @@ export default defineComponent({
   components: { }, 
 
   props: {
-    width:{
-        type:String,
-        default:'400px',
-    },
-    height:{
-        type:String,
-        default:'100px',
+    corInputText:{
+        type: String,
+        default: "#707070",
     }
    },
 
@@ -34,15 +30,15 @@ export default defineComponent({
 </script>
 
 <template>
-    <!-- <img src="" alt=""> -->
-    <div class="img"></div>
+    <input type="input" name="label">
 </template>
 
 
 <style scoped>
-img,.img{
-    width: v-bind('width');
-    height: v-bind('height');
-    background-color :gray; 
+input{
+    border-radius: 4px;
+    border: 1px solid #707070;
+    width: 100%;
+    height: 100%;
 }
 </style>

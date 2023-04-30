@@ -1,6 +1,6 @@
 <script>
 import { defineComponent } from "vue";
-const name = ''
+const name = 'TextosPadroesPopups'
 
 export default defineComponent({
   name,
@@ -8,13 +8,13 @@ export default defineComponent({
   components: { }, 
 
   props: {
-    width:{
-        type:String,
-        default:'400px',
+    textoPagina:{
+        type: String,
+        default: "Lorem Ipsun",
     },
-    height:{
-        type:String,
-        default:'100px',
+    corTextoPagina:{
+        type: String,
+        default: "#707070",
     }
    },
 
@@ -34,15 +34,14 @@ export default defineComponent({
 </script>
 
 <template>
-    <!-- <img src="" alt=""> -->
-    <div class="img"></div>
+    <div class="texto"> {{textoPagina}}</div>
 </template>
 
 
 <style scoped>
-img,.img{
-    width: v-bind('width');
-    height: v-bind('height');
-    background-color :gray; 
+.texto{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: v-bind('corTextoPagina');
 }
 </style>
