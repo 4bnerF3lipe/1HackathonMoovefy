@@ -5,7 +5,7 @@ const name = 'Popup'
 export default defineComponent({
   name,
 
-  components: {  },
+  components: {},
 
   props: {
     visible: {
@@ -15,6 +15,10 @@ export default defineComponent({
     click: {
       type: Function,
       default: null
+    },
+    title: {
+      type: String,
+      default: ''
     }
   },
 
@@ -36,12 +40,16 @@ export default defineComponent({
   <div v-if="visible" class="modal">
     <div class="modal-content">
       <span class="close" @click="click">&times;</span>
-      <b class = "titulo">Um pouco sobre nós: ONG Focinhos Carentes</b>
-      <p class = "sobre">Em Prol da Causa Animal em Bauru desde 2013</p>
-      <div class="infos"> Trabalhamos com diversos projetos regionais. Nossas ações incluem o resgate e castração de bichinhos em situação de rua juntamente ao levantamento de campanhas voltadas para a vacinação e suporte enquanto não encontram um novo lar.</div>
-      <p class = "sobre">Para mais informações:</p>
+      <b class="titulo">Um pouco sobre nós: ONG {{ title }}</b>
+      <p class="sobre">Em Prol da Causa Animal em Bauru desde 2013</p>
+      <div class="infos">
+        Trabalhamos com diversos projetos regionais. Nossas ações incluem o resgate e castração de
+        bichinhos em situação de rua juntamente ao levantamento de campanhas voltadas para a
+        vacinação e suporte enquanto não encontram um novo lar.
+      </div>
+      <p class="sobre">Para mais informações:</p>
       <div class="imagem">
-      <img  src="../../assets/imgs/redesocial.png"/> 
+        <img src="../../assets/imgs/redesocial.png" />
       </div>
     </div>
   </div>
@@ -62,7 +70,6 @@ export default defineComponent({
 }
 
 .modal-content {
-  height: 38%;
   background-color: white;
   padding: 20px;
   border-radius: 15px;
@@ -80,25 +87,24 @@ export default defineComponent({
   cursor: pointer;
 }
 
-.titulo{
+.titulo {
   margin-bottom: 30px;
-  color:#707082;
+  color: #707082;
 }
 
-.infos{
+.infos {
   margin-top: 6%;
   margin-bottom: 6%;
   text-align: left;
 }
 
-.sobre{
+.sobre {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-img{
+img {
   height: 50px;
 }
-
 </style>

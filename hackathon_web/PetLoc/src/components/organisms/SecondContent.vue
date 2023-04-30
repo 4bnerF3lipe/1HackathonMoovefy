@@ -1,12 +1,13 @@
 <script>
 import { defineComponent } from 'vue'
+import PopupONG from '../molecules/PopupONG.vue'
 
 const name = 'SegundaSessao'
 
 export default defineComponent({
   name,
 
-  components: {},
+  components: { PopupONG },
 
   props: {},
 
@@ -15,10 +16,18 @@ export default defineComponent({
   updated() {},
 
   data() {
-    return {}
+    return {
+      isVisible: false,
+      OngName: ''
+    }
   },
 
-  methods: {},
+  methods: {
+    handlePopup(props) {
+      this.OngName = props
+      this.isVisible = !this.isVisible
+    }
+  },
 
   computed: {}
 })
@@ -27,13 +36,22 @@ export default defineComponent({
 <template>
   <div class="content">
     <ul class="img-container">
-      <img src="../../assets/imgs/ongs/Grupo 71.png" @click="handlePopup" />
-      <img src="../../assets/imgs/ongs/Grupo 72.png" @click="handlePopup" />
-      <img src="../../assets/imgs/ongs/Grupo 73.png" @click="handlePopup" />
-      <img src="../../assets/imgs/ongs/Grupo 74.png" @click="handlePopup" />
-      <img src="../../assets/imgs/ongs/Grupo 75.png" @click="handlePopup" />
+      <img src="../../assets/imgs/ongs/Grupo 71.png" @click="() => handlePopup('Arca da Fé')" />
+      <img src="../../assets/imgs/ongs/Grupo 72.png" @click="() => handlePopup('Arca Brasil')" />
+      <img
+        src="../../assets/imgs/ongs/Grupo 73.png"
+        @click="() => handlePopup('Amigos São Francisco')"
+      />
+      <img
+        src="../../assets/imgs/ongs/Grupo 74.png"
+        @click="() => handlePopup('Projeto Acolher')"
+      />
+      <img
+        src="../../assets/imgs/ongs/Grupo 75.png"
+        @click="() => handlePopup('Focinhos Carentes')"
+      />
     </ul>
-    <PopupONG :visible="isVisible" :click="handlePopup"> </PopupONG>
+    <PopupONG :visible="isVisible" :click="handlePopup" :title="OngName"> </PopupONG>
   </div>
 </template>
 
@@ -58,6 +76,7 @@ export default defineComponent({
 .img-container img {
   width: 10rem;
   height: 10rem;
+  cursor: pointer;
   border-radius: 18px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }

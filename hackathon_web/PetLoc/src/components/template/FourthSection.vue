@@ -37,24 +37,24 @@ export default defineComponent({
       <div class="sup-footer">
         <div>
           <h3>Mapa do Site</h3>
-          <p>Encontre um pet</p>
-          <p>Conheças nossas ONG's</p>
-          <p>Serviços</p>
-          <p>Patrocinadires</p>
+          <p><u>Encontre um pet</u></p>
+          <p><u>Conheças nossas ONG's</u></p>
+          <p><u>Serviços</u></p>
+          <p><u>Patrocinadires</u></p>
         </div>
         <div>
           <h3>Iniciativas</h3>
-          <p>Adota Pet</p>
-          <p>Apadrinhamento de Pets</p>
-          <p>Visite uma ONG</p>
+          <p><u>Adota Pet</u></p>
+          <p><u>Apadrinhamento de Pets</u></p>
+          <p><u>Visite uma ONG</u></p>
         </div>
         <div>
           <h3>Empresas Parceiras</h3>
-          <p>GoPet</p>
-          <p>PaTUdos</p>
-          <p>PetFit</p>
-          <p>PetSiciety</p>
-          <p>Dobaz</p>
+          <p><u>GoPet</u></p>
+          <p><u>PaTUdos</u></p>
+          <p><u>PetFit</u></p>
+          <p><u>PetSiciety</u></p>
+          <p><u>Dobaz</u></p>
         </div>
       </div>
       <div class="inf-footer">
@@ -112,6 +112,12 @@ export default defineComponent({
   align-items: start;
   color: #fff;
   justify-content: space-around;
+}
+.sup-footer h3 {
+  cursor: pointer;
+}
+.sup-footer p {
+  cursor: pointer;
 }
 
 .inf-footer {

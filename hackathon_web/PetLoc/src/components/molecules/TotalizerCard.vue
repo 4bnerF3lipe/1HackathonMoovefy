@@ -31,21 +31,21 @@ export default defineComponent({
         <TotalizerCardComponent
           cor-numero="#ffffff"
           corsubtitulo="#ffffff"
-          :numero="1000"
+          :numero="1953"
           subtitulo="Pets disponíveis para adoção"
         />
 
         <TotalizerCardComponent
           cor-numero="#ffffff"
           corsubtitulo="#ffffff"
-          :numero="2369"
+          :numero="4369"
           subtitulo="Pets resgatados"
         />
 
         <TotalizerCardComponent
           cor-numero="#ffffff"
           corsubtitulo="#ffffff"
-          :numero="1009"
+          :numero="1309"
           subtitulo="Pets adotaods"
         />
       </div>

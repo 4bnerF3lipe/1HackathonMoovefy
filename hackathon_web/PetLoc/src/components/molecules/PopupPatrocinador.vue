@@ -1,7 +1,7 @@
 <script>
 import { defineComponent } from 'vue'
-import ComponenteFormulario from "../molecules/ComponenteFormulario.vue";
-import CustomButton from '../atoms/CustomButton.vue';
+import ComponenteFormulario from '../molecules/ComponenteFormulario.vue'
+import CustomButton from '../atoms/CustomButton.vue'
 const name = 'Popup'
 
 export default defineComponent({
@@ -38,12 +38,12 @@ export default defineComponent({
   <div v-if="visible" class="modal">
     <div class="modal-content">
       <span class="close" @click="click">&times;</span>
-      <p class = "titulo">Formulário para Cadastro</p>
-      <ComponenteFormulario inputText="Razão Social"/>
-      <ComponenteFormulario inputText="CNPJ"/>
-      <ComponenteFormulario inputText="Contato"/>
+      <p class="titulo">Formulário para Cadastro</p>
+      <ComponenteFormulario inputText="Razão Social" />
+      <ComponenteFormulario inputText="CNPJ" />
+      <ComponenteFormulario inputText="Contato" />
       <div class="button-container">
-        <CustomButton texto="Enviar" class ="Button"/>
+        <CustomButton texto="Enviar" class="Button" />
       </div>
     </div>
   </div>
@@ -62,23 +62,21 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
 }
-.button-container{
+.button-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width:100%;
-  height: 50%;
+  width: 100%;
+  height: 25%;
 }
-.Button{
+.Button {
   width: 20%;
   height: 48px;
-  margin:20px;
+  margin: 20px;
   border-radius: 32px;
   font-size: 1.1rem;
 }
 .modal-content {
-  
-  height: 50%;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
@@ -95,8 +93,8 @@ export default defineComponent({
   font-weight: bold;
   cursor: pointer;
 }
-.titulo{
+.titulo {
   margin-bottom: 30px;
-  color:#707082;
+  color: #707082;
 }
 </style>
