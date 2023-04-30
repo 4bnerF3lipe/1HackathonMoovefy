@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
@@ -8,7 +9,9 @@ import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
 import 'app/menuprincipal/page/menu_principal_page.dart';
 
-void main() {
+void main() async {
+  await Future.delayed(const Duration(seconds: 2));
+  FlutterNativeSplash.remove();
   runApp(const App());
 }
 
