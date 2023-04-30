@@ -33,7 +33,7 @@ export default defineComponent({
   <div class="header">
     <div class="content">
       <div class="logo">
-        <img src="../../assets/imgs/LOGO.svg" />
+        <img src="../../assets/imgs/LOGO.png" />
       </div>
     </div>
   </div>

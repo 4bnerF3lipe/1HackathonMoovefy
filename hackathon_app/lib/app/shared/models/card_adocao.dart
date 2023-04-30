@@ -16,7 +16,7 @@ class CardAdocao extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 2.h),
-      height: 19.h,
+      height: 21.h,
       width: 41.w,
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
@@ -27,7 +27,7 @@ class CardAdocao extends StatelessWidget {
           )),
       child: Column(children: [
         Container(
-          height: 8.h,
+          height: 10.h,
           width: 41.w,
           child: Image.asset(
             image,

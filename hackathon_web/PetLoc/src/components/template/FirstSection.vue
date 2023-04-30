@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import HeaderBase from '../molecules/HeaderBase.vue'
 import FirstContent from '../organisms/FirstContent.vue'
-import TotalizerCard from '../organisms/TotalizerCard.vue'
+import TotalizerCard from '../molecules/TotalizerCard.vue'
 const name = 'FirstSection'
 
 export default defineComponent({
