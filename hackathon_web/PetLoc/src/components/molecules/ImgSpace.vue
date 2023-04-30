@@ -1,27 +1,27 @@
 <script>
 import { defineComponent } from 'vue'
-import CustomSubHeader from '../atoms/CustomSubHeader.vue'
+import SubTitle from '../atoms/SubTitle.vue'
 import PImage from '../PImage.vue'
 const name = 'ImgSpace'
 
 export default defineComponent({
   name,
 
-  components: { CustomSubHeader, PImage },
+  components: { SubTitle, PImage },
 
   props: {
-  imgs:{
-    type:Array,
-    default:() => []
-  },
-  primeiroTitulo:{
-    type:String,
-    default:'',
-  },
-  segundoTitulo:{
-    type:String,
-    default:'',
-  }
+    imgs: {
+      type: Array,
+      default: () => []
+    },
+    primeiroTitulo: {
+      type: String,
+      default: ''
+    },
+    segundoTitulo: {
+      type: String,
+      default: ''
+    }
   },
 
   mounted() {},
@@ -29,9 +29,7 @@ export default defineComponent({
   updated() {},
 
   data() {
-    return {
-     
-    }
+    return {}
   },
 
   methods: {},
@@ -43,8 +41,8 @@ export default defineComponent({
 <template>
   <div class="content">
     <div class="subheader-container">
-      <CustomSubHeader :title="primeiroTitulo" color="#5e454b"/>
-      <CustomSubHeader :title="segundoTitulo" color="#5e454b" class="ver-mais" v-if="segundoTitulo"/>
+      <SubTitle :text="primeiroTitulo" textColor="#5e454b" />
+      <SubTitle :text="segundoTitulo" textColor="#5e454b" />
     </div>
     <ul class="img-container">
       <li v-for="(props, index) in imgs" :key="index">
@@ -60,22 +58,21 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .img-container li {
   list-style: none;
 }
-.content{
-  margin-top:28px;
-  margin-bottom:28px;
+.content {
+  margin-top: 28px;
+  margin-bottom: 28px;
 }
-.subheader-container{
+.subheader-container {
   display: flex;
-  width:90%;
+  width: 90%;
   justify-content: space-between;
 }
-.ver-mais{
+.ver-mais {
   cursor: pointer;
 }
 </style>

@@ -1,13 +1,13 @@
 <script>
 import { defineComponent } from 'vue'
-import CustomSubHeader from '../atoms/CustomSubHeader.vue'
+import PSubTitle from '../atoms/PSubTitle.vue'
 import Card from '../molecules/card.vue'
 const name = 'Servicos'
 
 export default defineComponent({
   name,
 
-  components: { CustomSubHeader, Card },
+  components: { PSubTitle, Card },
 
   props: {},
 
@@ -62,12 +62,12 @@ export default defineComponent({
 
 <template>
   <div class="title">
-    <CustomSubHeader title="Serviços" />
+    <PSubTitle title="Serviços" />
   </div>
   <div class="content">
     <ul class="service-container">
       <li v-for="(props, index) in cards" :key="index">
-        <Card :img="props.img" :title="props.title" :subtitle="props.subtitle" class="card"/>
+        <Card :img="props.img" :title="props.title" :subtitle="props.subtitle" class="card" />
       </li>
     </ul>
   </div>
@@ -91,7 +91,7 @@ export default defineComponent({
   width: 90%;
   justify-content: space-between;
 }
-.card{
+.card {
   width: 100%;
 }
 .service-container {
