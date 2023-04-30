@@ -39,13 +39,9 @@ class App extends StatelessWidget {
                 locale: const Locale('pt', 'BR'),
                 initialRoute: '/menu',
                 getPages: [
-                  // GetPage(
-                  //   name: "/menu",
-                  //   page: () => const MenuPrincipalPage(),
-                  // ),
                   GetPage(
                     name: "/menu",
-                    page: () => const ChatPage(),
+                    page: () => const MenuPrincipalPage(),
                   ),
                 ]));
       }),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackathon_app/app/shared/backgrounds/background_base/background_base.dart';
+import 'package:hackathon_app/app/shared/models/assets_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 import '../../../menuprincipal/widgets/bottomsheet_widget.dart';
 import '../../models/cores_aplicativo.dart';
@@ -27,15 +29,9 @@ class BackgroundMenu extends StatelessWidget {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          onPressed: () => tapAcoesRapidas,
-          tooltip: 'Create',
-          elevation: 10.h,
-          backgroundColor: CoresAplicativo.corAmarelo,
-          child: const Icon(
-            Icons.send,
-            color: CoresAplicativo.corMarrom,
-          ),
-        ),
+            onPressed: () => tapAcoesRapidas,
+            backgroundColor: CoresAplicativo.corAmarelo,
+            child: SvgPicture.asset(AssetsAplicativo.locationadd)),
       ),
     );
   }
