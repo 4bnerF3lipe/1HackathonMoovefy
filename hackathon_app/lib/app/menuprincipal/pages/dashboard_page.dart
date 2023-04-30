@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/app/shared/backgrounds/background_base/background_base.dart';
 import 'package:hackathon_app/app/shared/models/assets_aplicativo.dart';
+import 'package:hackathon_app/app/shared/models/fontes.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 import 'package:hackathon_app/app/shared/widgets/card_widget.dart';
 import 'package:hackathon_app/app/shared/widgets/textinput_widget.dart';
@@ -26,23 +27,35 @@ class DashboardPage extends StatelessWidget {
             placeholderText: "O que você procura?",
           ),
           SizedBox(
-            height: 2.5.h,
+            height: 4.h,
           ),
-          Align(alignment: Alignment.topLeft, child: Text("Ações Rápidas")),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "Ações Rápidas",
+              style: TextStyle(
+                color: CoresAplicativo.textColor,
+                fontWeight: FontWeight.bold,
+                fontSize: Fontes.fonteMedia,
+              ),
+            ),
+          ),
           SizedBox(
-            height: .5.h,
+            height: 1.5.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const CardWidget(
+              CardWidget(
+                height: 12.h,
                 assetImage: AssetsAplicativo.cardshop,
                 titulo: "ONG's",
               ),
               SizedBox(
                 width: 2.5.h,
               ),
-              const CardWidget(
+              CardWidget(
+                height: 12.h,
                 assetImage: AssetsAplicativo.cardong,
                 titulo: "Seja Padrinho",
               )

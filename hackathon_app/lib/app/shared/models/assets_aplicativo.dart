@@ -13,4 +13,5 @@ class AssetsAplicativo {
   static const String perfilUsuario = '$_pathSvg/profile-circle.svg';
   static const String localizacaoPetPerdido = '$_pathSvg/location-add.svg';
   static const String header = '$_pathSvg/header.svg';
+  static const String petlocktext = '$_pathSvg/PETLOC.svg';
 }

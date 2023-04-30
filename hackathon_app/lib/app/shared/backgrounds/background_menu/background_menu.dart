@@ -20,19 +20,17 @@ class BackgroundMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundBase(
-      child: Scaffold(
-        body: child,
-        bottomNavigationBar: BottomSheetBar(
-          tapItem: tapBottomItem,
-          tabItemSelected: tabItemSelected,
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-            onPressed: () => tapAcoesRapidas,
-            backgroundColor: CoresAplicativo.corAmarelo,
-            child: SvgPicture.asset(AssetsAplicativo.locationadd)),
+    return Scaffold(
+      body: child,
+      bottomNavigationBar: BottomSheetBar(
+        tapItem: tapBottomItem,
+        tabItemSelected: tabItemSelected,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => tapAcoesRapidas,
+          backgroundColor: CoresAplicativo.corAmarelo,
+          child: SvgPicture.asset(AssetsAplicativo.locationadd)),
     );
   }
 }

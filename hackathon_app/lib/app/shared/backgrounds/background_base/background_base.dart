@@ -12,27 +12,36 @@ class BackgroundBase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Stack(children: [
-        SvgPicture.asset(
-          AssetsAplicativo.header,
-          width: 100.w,
-          fit: BoxFit.fill,
-          height: 15.h,
-        ),
-        Align(
-          alignment: Alignment.topRight,
-          child: Padding(
-            padding: EdgeInsets.fromLTRB(0, 2.h, 4.w, 0),
-            child: SvgPicture.asset(
-              AssetsAplicativo.perfilUsuario,
-              width: 4.w,
-              height: 4.h,
-              fit: BoxFit.contain,
-            ),
+        child: Stack(
+      children: [
+        Container(
+          color: Colors.transparent,
+          alignment: Alignment.topCenter,
+          child: SvgPicture.asset(
+            AssetsAplicativo.header,
+            width: 100.w,
+            fit: BoxFit.fill,
+            height: 16.5.h,
           ),
         ),
-        Expanded(child: child),
-      ]),
-    );
+        Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 2.5.h),
+              child: Align(
+                alignment: Alignment.center,
+                child: SvgPicture.asset(
+                  AssetsAplicativo.petlocktext,
+                  width: 8.w,
+                  fit: BoxFit.fill,
+                  height: 8.w,
+                ),
+              ),
+            ),
+            Expanded(child: child),
+          ],
+        ),
+      ],
+    ));
   }
 }

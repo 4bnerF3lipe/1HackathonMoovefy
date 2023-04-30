@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
+import '../models/cores_aplicativo.dart';
+
 class CardWidget extends StatelessWidget {
   final double? width;
   final double? height;
@@ -17,7 +19,12 @@ class CardWidget extends StatelessWidget {
       child: Container(
           width: width,
           height: height ?? 10.h,
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(2.h))),
+          decoration: BoxDecoration(
+              color: CoresAplicativo.corBranca,
+              borderRadius: BorderRadius.all(
+                Radius.circular(2.h),
+              ),
+              border: Border.all(width: 1, color: CoresAplicativo.cinzaClaro)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [SvgPicture.asset(assetImage), SizedBox(height: .5.h), Text(titulo ?? "")],
