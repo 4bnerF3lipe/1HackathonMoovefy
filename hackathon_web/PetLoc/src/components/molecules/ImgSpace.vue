@@ -9,7 +9,20 @@ export default defineComponent({
 
   components: { CustomSubHeader, PImage },
 
-  props: {},
+  props: {
+  imgs:{
+    type:Array,
+    default:() => []
+  },
+  primeiroTitulo:{
+    type:String,
+    default:'',
+  },
+  segundoTitulo:{
+    type:String,
+    default:'',
+  }
+  },
 
   mounted() {},
 
@@ -17,24 +30,7 @@ export default defineComponent({
 
   data() {
     return {
-      imgs: [
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        },
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        },
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        },
-        {
-          src: 'https://static3.tcdn.com.br/img/img_prod/460977/teste_100485_1_cbc226c7d23a19c784fb4752ffe61337.png',
-          alt: 'Descrição da imagem'
-        }
-      ]
+     
     }
   },
 
@@ -47,8 +43,8 @@ export default defineComponent({
 <template>
   <div class="content">
     <div class="subheader-container">
-      <CustomSubHeader title="Conheça nossas Ongs"/>
-      <CustomSubHeader title="Ver Mais" />
+      <CustomSubHeader :title="primeiroTitulo"/>
+      <CustomSubHeader :title="segundoTitulo" class="ver-mais" v-if="segundoTitulo"/>
     </div>
     <ul class="img-container">
       <li v-for="(props, index) in imgs" :key="index">
@@ -77,5 +73,8 @@ export default defineComponent({
   display: flex;
   width:90%;
   justify-content: space-between;
+}
+.ver-mais{
+  cursor: pointer;
 }
 </style>
