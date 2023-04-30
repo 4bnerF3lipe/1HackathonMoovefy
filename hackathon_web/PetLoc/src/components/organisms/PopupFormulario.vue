@@ -28,12 +28,12 @@
  
  <template>
      <div class="card-Formulario">
-         <TextosPadroesPopups class="titulo" :inputText="inputText" :corInputText="corInputText"/>
+     
          <div class="formulario">
-            <ComponenteFormulario :inputText="inputText" :corInputText="corInputText"/>
-            <ComponenteFormulario :inputText="inputText" :corInputText="corInputText"/>
-            <ComponenteFormulario :inputText="inputText" :corInputText="corInputText"/>
-            <ComponenteFormulario :inputText="inputText" :corInputText="corInputText"/>
+            <ComponenteFormulario textoPagina="aaaaa" />
+            <ComponenteFormulario textoPagina="aaaaa"/>
+            <ComponenteFormulario textoPagina="aaaaa"/>
+            <ComponenteFormulario textoPagina="aaaaa"/>
         </div>
      </div>
  </template>
@@ -46,10 +46,12 @@
  }
 
  .formulario{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+   width: 100%;
+   height: 30px; 
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
  }
  </style>
  

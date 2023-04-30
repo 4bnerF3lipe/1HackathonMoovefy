@@ -29,11 +29,11 @@ export default defineComponent({
     <div>
         <div class="content">
             <div class="totalizadores">
-                <ComponenteTotalizador :numero="1000" subtitulo="pets" />
-                <div class="vertical-hr"></div>
-                <ComponenteTotalizador :numero="1000" subtitulo="pets" />
-                <div class="vertical-hr"></div>
-                <ComponenteTotalizador :numero="1000" subtitulo="pets" />
+                <ComponenteTotalizador  cor-numero="#ffffff" corsubtitulo="#ffffff" :numero="1000" subtitulo="Pets disponíveis para adoção" />
+                
+                <ComponenteTotalizador cor-numero="#ffffff" corsubtitulo="#ffffff" :numero="2369" subtitulo="Pets resgatados" />
+                
+                <ComponenteTotalizador cor-numero="#ffffff" corsubtitulo="#ffffff" :numero="1009" subtitulo="Pets adotaods" />
             </div>
         </div>
     </div>
@@ -46,16 +46,16 @@ export default defineComponent({
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: #E6E6E6;
+    background-color: #4f7575;
     height: 250px;
 }
 .totalizadores{
     display: flex;
     justify-content: space-between;
-    width:40% ;
+    width:60% ;
 }
 .vertical-hr{
-    border-left: 2px solid #707070;
+    border-left: 2px solid #ffffff;
   height: 80px;
 }
 </style>
