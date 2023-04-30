@@ -5,6 +5,7 @@ import 'package:hackathon_app/app/shared/models/cores_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/fontes.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 
+import '../../shared/models/card_opcoes.dart';
 import '../../shared/models/text_widget.dart';
 
 class PerfilPage extends StatelessWidget {
@@ -19,18 +20,31 @@ class PerfilPage extends StatelessWidget {
           children: [
             Align(
               alignment: Alignment.topCenter,
-              child: Icon(
-                Icons.circle,
-                color: CoresAplicativo.corPrimaria,
-                size: 25.w,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: CoresAplicativo.corBranca,
+                    borderRadius: BorderRadius.circular(50.w),
+                    border: Border.all(
+                      width: 1,
+                      color: CoresAplicativo.corDetalhe,
+                    )),
+                height: 13.h,
+                width: 27.w,
+                child: Icon(
+                  Icons.person,
+                  color: CoresAplicativo.corDetalhe,
+                  size: 8.h,
+                ),
               ),
             ),
             SizedBox(
               height: 1.h,
             ),
             TextWidget(
-              texto: "Maria da Silva Mendez",
+              texto: "Mariana Andreolli",
               fontSize: Fontes.fonteGrande,
+              textColor: CoresAplicativo.corDetalhe,
+              fontWeight: FontWeight.bold,
             ),
             SizedBox(
               height: 2.h,
@@ -40,7 +54,7 @@ class PerfilPage extends StatelessWidget {
                 height: 15.h,
                 padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(3.w),
+                    borderRadius: BorderRadius.circular(2.w),
                     color: CoresAplicativo.corBranca,
                     border: Border.all(width: 1, color: CoresAplicativo.cinzaClaro)),
                 child: Column(
@@ -52,39 +66,31 @@ class PerfilPage extends StatelessWidget {
                         TextWidget(
                           texto: "Telefone: ",
                           fontSize: Fontes.fontePadrao,
-                          fontWeight: FontWeight.bold,
                         ),
-                        const TextWidget(texto: "(14) 55555-5555")
+                        const TextWidget(texto: "(14) 00000-0000")
                       ],
                     ),
                     Row(
                       children: const [
                         TextWidget(
                           texto: "Email: ",
-                          fontWeight: FontWeight.bold,
                         ),
-                        TextWidget(texto: "mariamendez@gmail.com")
+                        TextWidget(texto: "marianaandreolli@moovefy.com.br")
                       ],
                     ),
                     Row(
                       children: const [
                         TextWidget(
                           texto: "Endereço: ",
-                          fontWeight: FontWeight.bold,
                         ),
-                        TextWidget(texto: "Alameda dos Alecrins")
+                        TextWidget(texto: "Rua Vinte e Nove de Outubro, 7-50")
                       ],
                     ),
                   ],
                 )),
-            SizedBox(
-              height: 2.h,
-            ),
-            const CardPerfil(descricao: "Apadrinhar um animal", imagem: Icons.heart_broken_rounded),
-            SizedBox(
-              height: 2.h,
-            ),
-            const CardPerfil(descricao: "Sair", imagem: Icons.exit_to_app),
+            const CardOpcoes(descricao: "Apadrinhar um animal"),
+            const CardOpcoes(descricao: "Pets adotados"),
+            const CardOpcoes(descricao: "Sair"),
           ],
         ),
       ),
