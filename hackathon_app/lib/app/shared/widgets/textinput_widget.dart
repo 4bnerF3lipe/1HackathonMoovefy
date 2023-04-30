@@ -15,10 +15,23 @@ class TextInputWidget extends StatelessWidget {
     return Padding(
       padding: padding ?? EdgeInsets.zero,
       child: TextField(
+        cursorHeight: 3.h,
         decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(2.h))),
-          hintText: placeholderText,
-        ),
+            filled: true,
+            contentPadding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 4.w),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.w)),
+            hintText: placeholderText,
+            enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                  color: CoresAplicativo.cinzaClaro,
+                ),
+                borderRadius: BorderRadius.circular(10.w)),
+            focusedBorder: OutlineInputBorder(
+                borderSide: const BorderSide(color: CoresAplicativo.corPrimaria),
+                borderRadius: BorderRadius.circular(10.w)),
+            focusColor: CoresAplicativo.corPrimaria,
+            hoverColor: Colors.white,
+            fillColor: Colors.white),
       ),
     );
   }

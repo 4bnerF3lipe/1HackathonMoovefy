@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   flutter_native_splash: ^2.2.19
   flutter_svg: ^2.0.5
+  carousel_slider: ^4.2.1
 
 flutter_native_splash:
   android: true
@@ -71,6 +72,7 @@ flutter:
   assets:
     - assets/
     - assets/svg/
+    - assets/png/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

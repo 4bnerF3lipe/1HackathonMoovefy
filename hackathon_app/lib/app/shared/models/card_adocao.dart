@@ -9,7 +9,8 @@ class CardAdocao extends StatelessWidget {
   final String nome;
   final String idade;
   final String ong;
-  const CardAdocao({super.key, required this.nome, required this.idade, required this.ong});
+  final String image;
+  const CardAdocao({super.key, required this.nome, required this.idade, required this.ong, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,12 @@ class CardAdocao extends StatelessWidget {
         Container(
           height: 8.h,
           width: 41.w,
-          color: CoresAplicativo.corDetalhe,
+          child: Image.asset(
+            image,
+            width: 41.w,
+            height: 8.h,
+            fit: BoxFit.fill,
+          ),
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),

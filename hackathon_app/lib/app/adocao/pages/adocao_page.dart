@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/app/shared/backgrounds/background_base/background_base.dart';
+import 'package:hackathon_app/app/shared/models/assets_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/card_perfil.dart';
 import 'package:hackathon_app/app/shared/models/cores_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/fontes.dart';
@@ -27,11 +28,17 @@ class AdocaoPage extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
+                    filled: true,
+                    fillColor: CoresAplicativo.corBranca,
                     contentPadding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 4.w),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.w)),
                     hintText: 'O que você procura?',
-                    icon: Icon(Icons.search),
-                    iconColor: CoresAplicativo.corPrimaria,
+                    hintStyle: TextStyle(
+                      color: CoresAplicativo.cinzaClaro,
+                      // other TextStyle properties
+                    ),
+                    suffixIcon: const Icon(Icons.search),
+                    suffixIconColor: CoresAplicativo.cinzaClaro,
                     enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: CoresAplicativo.cinzaClaro,
@@ -47,12 +54,15 @@ class AdocaoPage extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   TextWidget(
                     texto: "Encontre seu PET",
                     fontWeight: FontWeight.bold,
                   ),
-                  Icon(Icons.filter_list_alt)
+                  Icon(
+                    Icons.tune_rounded,
+                    color: CoresAplicativo.textColor,
+                  )
                 ],
               ),
               Expanded(
@@ -62,31 +72,22 @@ class AdocaoPage extends StatelessWidget {
                     nome: "Calvin",
                     idade: "2 anos",
                     ong: "Arca da fé",
+                    image1: AssetsAplicativo.cat1,
+                    image2: AssetsAplicativo.cat2,
                   ),
                   ListaAdocaoWidget(
                     nome: "Calvin",
                     idade: "2 anos",
                     ong: "Arca da fé",
+                    image1: AssetsAplicativo.cat3,
+                    image2: AssetsAplicativo.dog1,
                   ),
                   ListaAdocaoWidget(
                     nome: "Calvin",
                     idade: "2 anos",
                     ong: "Arca da fé",
-                  ),
-                  ListaAdocaoWidget(
-                    nome: "Calvin",
-                    idade: "2 anos",
-                    ong: "Arca da fé",
-                  ),
-                  ListaAdocaoWidget(
-                    nome: "Calvin",
-                    idade: "2 anos",
-                    ong: "Arca da fé",
-                  ),
-                  ListaAdocaoWidget(
-                    nome: "Calvin",
-                    idade: "2 anos",
-                    ong: "Arca da fé",
+                    image1: AssetsAplicativo.dog2,
+                    image2: AssetsAplicativo.dog3,
                   ),
                 ]),
               )),
