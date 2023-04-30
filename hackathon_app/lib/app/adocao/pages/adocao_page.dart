@@ -3,8 +3,11 @@ import 'package:hackathon_app/app/shared/backgrounds/background_base/background_
 import 'package:hackathon_app/app/shared/models/card_perfil.dart';
 import 'package:hackathon_app/app/shared/models/cores_aplicativo.dart';
 import 'package:hackathon_app/app/shared/models/fontes.dart';
+import 'package:hackathon_app/app/shared/models/lista_adocao_widget.dart';
 import 'package:hackathon_app/app/shared/models/tamanho.dart';
 import 'package:hackathon_app/app/shared/models/text_widget.dart';
+
+import '../../shared/models/card_adocao.dart';
 
 class AdocaoPage extends StatelessWidget {
   const AdocaoPage({super.key});
@@ -13,6 +16,7 @@ class AdocaoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BackgroundBase(
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 7.w),
           child: Column(
@@ -21,26 +25,71 @@ class AdocaoPage extends StatelessWidget {
               SizedBox(
                 height: 2.h,
               ),
-              TextWidget(
-                texto: "Adote um bichinho",
-                fontSize: Fontes.fonteTitulo,
-                fontWeight: FontWeight.bold,
+              TextField(
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 4.w),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.w)),
+                    hintText: 'O que você procura?',
+                    icon: Icon(Icons.search),
+                    iconColor: CoresAplicativo.corPrimaria,
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: CoresAplicativo.cinzaClaro,
+                        ),
+                        borderRadius: BorderRadius.circular(10.w)),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: CoresAplicativo.corPrimaria),
+                        borderRadius: BorderRadius.circular(10.w)),
+                    focusColor: CoresAplicativo.corPrimaria),
+              ),
+              SizedBox(
+                height: 2.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextWidget(
+                    texto: "Encontre seu PET",
+                    fontWeight: FontWeight.bold,
+                  ),
+                  Icon(Icons.filter_list_alt)
+                ],
               ),
               Expanded(
-                child: SingleChildScrollView(
-                  child: Column(children: const [
-                    CardPerfil(descricao: "Luna", imagem: Icons.circle),
-                    CardPerfil(descricao: "Rex", imagem: Icons.circle),
-                    CardPerfil(descricao: "Capitão", imagem: Icons.circle),
-                    CardPerfil(descricao: "Chico", imagem: Icons.circle),
-                    CardPerfil(descricao: "Pipoca", imagem: Icons.circle),
-                    CardPerfil(descricao: "Paçoca", imagem: Icons.circle),
-                    CardPerfil(descricao: "Thor", imagem: Icons.circle),
-                    CardPerfil(descricao: "Pantera", imagem: Icons.circle),
-                    CardPerfil(descricao: "Fred", imagem: Icons.circle),
-                  ]),
-                ),
-              )
+                  child: SingleChildScrollView(
+                child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
+                  ListaAdocaoWidget(
+                    nome: "Calvin",
+                    idade: "2 anos",
+                    ong: "Arca da fé",
+                  ),
+                  ListaAdocaoWidget(
+                    nome: "Calvin",
+                    idade: "2 anos",
+                    ong: "Arca da fé",
+                  ),
+                  ListaAdocaoWidget(
+                    nome: "Calvin",
+                    idade: "2 anos",
+                    ong: "Arca da fé",
+                  ),
+                  ListaAdocaoWidget(
+                    nome: "Calvin",
+                    idade: "2 anos",
+                    ong: "Arca da fé",
+                  ),
+                  ListaAdocaoWidget(
+                    nome: "Calvin",
+                    idade: "2 anos",
+                    ong: "Arca da fé",
+                  ),
+                  ListaAdocaoWidget(
+                    nome: "Calvin",
+                    idade: "2 anos",
+                    ong: "Arca da fé",
+                  ),
+                ]),
+              )),
             ],
           ),
         ),
