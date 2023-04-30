@@ -3,13 +3,14 @@ import { defineComponent } from 'vue'
 import PrimeiraSessao from '../components/template/PrimeiraSessao.vue'
 import SegundaSessao from '../components/organisms/SegundaSessao.vue'
 import TerceiraSessao from '../components/organisms/TerceiraSessao.vue'
+import Popup from '../components/molecules/Popup.vue'
 
 const name = 'HomeView'
 
 export default defineComponent({
   name,
 
-  components: { PrimeiraSessao, SegundaSessao, TerceiraSessao },
+  components: { PrimeiraSessao, SegundaSessao, TerceiraSessao, Popup },
 
   props: {},
 
@@ -18,10 +19,17 @@ export default defineComponent({
   updated() {},
 
   data() {
-    return {}
+    return {
+      isVisible: true
+    }
   },
 
-  methods: {},
+  methods: {
+    handlePopup() {
+      console.log('Nhapo')
+      this.isVisible = !this.isVisible
+    }
+  },
 
   computed: {}
 })
@@ -32,6 +40,8 @@ export default defineComponent({
     <PrimeiraSessao />
     <SegundaSessao />
     <TerceiraSessao />
+
+    <Popup :visible="isVisible" :click="handlePopup" />
   </div>
 </template>
 
