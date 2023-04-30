@@ -59,6 +59,7 @@ export default defineComponent({
   width: 10rem;
   height: 10rem;
   border-radius: 18px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1024px) {

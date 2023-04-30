@@ -2,16 +2,15 @@
 import { defineComponent } from 'vue'
 import FirstSection from '../components/template/FirstSection.vue'
 import SecondSection from '../components/template/SecondSection.vue'
-
-import TerceiraSessao from '../components/organisms/TerceiraSessao.vue'
-import QuartaSessao from '../components/template/QuartaSessao.vue'
+import ThirdSection from '../components/template/ThirdSection.vue'
+import FourthSection from '../components/template/FourthSection.vue'
 
 const name = 'HomeView'
 
 export default defineComponent({
   name,
 
-  components: { FirstSection, SecondSection, TerceiraSessao, QuartaSessao },
+  components: { FirstSection, SecondSection, ThirdSection, FourthSection },
 
   props: {},
 
@@ -33,8 +32,8 @@ export default defineComponent({
   <div>
     <FirstSection />
     <SecondSection />
-    <TerceiraSessao />
-    <QuartaSessao />
+    <ThirdSection />
+    <FourthSection />
   </div>
 </template>
 

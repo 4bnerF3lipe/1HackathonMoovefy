@@ -2,12 +2,16 @@
 import { defineComponent } from 'vue'
 import PTitle from '../atoms/PTitle.vue'
 import PSubTitle from '../atoms/PSubTitle.vue'
+import CustomButton from '../atoms/CustomButton.vue'
+import PopupPatrocinador from '../molecules/PopupPatrocinador.vue'
+import PopupFormulario from '../molecules/PopupFormulario.vue'
+
 const name = 'FirstContent'
 
 export default defineComponent({
   name,
 
-  components: { PTitle, PSubTitle },
+  components: { PTitle, PSubTitle, CustomButton },
 
   props: {},
 
@@ -16,7 +20,9 @@ export default defineComponent({
   updated() {},
 
   data() {
-    return {}
+    return {
+      isVisible: false
+    }
   },
 
   methods: {},
@@ -36,6 +42,14 @@ export default defineComponent({
         textColor="#707070"
         class="subtitle"
       />
+
+      <div class="button-container">
+        <CustomButton class="Button" texto="Conheça nossos serviços" @click="handlePopup" />
+      </div>
+
+      <!-- <PopupPatrocinador :visible="isVisible" :click="handlePopup">
+        <PopupFormulario />
+      </PopupPatrocinador> -->
     </div>
     <div class="box-image">
       <img src="../../assets/imgs/Imagem.svg" />
@@ -56,12 +70,13 @@ export default defineComponent({
 }
 .box-text {
   display: flex;
+  width: 50%;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .title {
-  text-align: center;
-  font-size: 2rem;
+  text-align: start;
+  font-size: 2.5rem;
   font-weight: 900;
 }
 
@@ -79,8 +94,42 @@ export default defineComponent({
 }
 
 .box-image img {
-  width: 35rem;
-  height: 35rem;
+  width: 40rem;
+  height: 40rem;
+}
+
+.button-container {
+  margin-top: 2rem;
+  width: 60%;
+  height: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Button {
+  width: 100%;
+  height: 5px;
+  background-color: #4f7575;
+  color: #fff;
+  border-radius: 32px;
+  font-size: 1.1rem;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.Button:hover {
+  cursor: pointer;
+  border: 1px solid #4f7575;
+  background-color: #fff;
+  color: #4f7575;
+}
+.Button:active {
+  cursor: pointer;
+  width: 100%;
+  padding-top: 22px;
+  border: 1px solid #4f7575;
+  background-color: #fff;
+  color: #4f7575;
 }
 
 @media (max-width: 1024px) {
